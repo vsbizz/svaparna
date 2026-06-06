@@ -11,7 +11,7 @@ export default function ReviewsCarousel() {
     {
       id: 0,
       text: "Hi, I'm Smriti, and I consulted Dr. Aparna of Swaparna Health for a back injury of mine. This happened a couple of months ago, and I was in severe pain. So Dr. Aparna actually tapped me on the back so that I could do my daily activities and so that my work week was not affected. And over the course of the last one and a half months, I have become independent and I'm able to do all the activities again with minimal problems and pain. So I have seen the progress in my posture and in the way I am doing day-to-day activities. And there is a lot of change which I am noticing in terms of how I feel and how I'm getting things done. So I highly recommend Dr. Aparna for all your needs of physical therapy. Thank you.",
-      author: "Louise Dias",
+      author: "Ms. Smriti",
       leftVideo: "assets/testimonial-videos/MsSmritiTestimonial.mov",
       rightImage: "assets/testimonial-videos/testimonial-img1.png",
       platform: "Google reviews",
@@ -19,7 +19,7 @@ export default function ReviewsCarousel() {
     {
       id: 1,
       text: "Hi, this is Mala. I had an umbilical hernia surgery in January. After my umbilical hernia surgery, Dr. Aparna's unique combination of physiotherapy and Ayurveda helped me recover far beyond my expectations. Her exercises improved my mobility immediately, while Ayurvedic treatments eased bloating, supported scar healing, and strengthened my core. Within six weeks, I was back to yoga and all my normal activities.",
-      author: "Michael Chang",
+      author: "Mrs. Mala",
       leftVideo: "assets/testimonial-videos/MrsMalaTestimonialTake2.mov",
       rightImage: "assets/testimonial-videos/testimonial-img3.png",
       platform: "Google reviews",
@@ -27,7 +27,7 @@ export default function ReviewsCarousel() {
     {
       id: 2,
       text: "Hello, This is Dr. Suri. I'm an acupunctress from California. I've had the opportunity to work with Dr. Aparna, and I really come to appreciate both her knowledge and the care she puts into her work. One thing that stands out to me is that how much she truly listens. She takes time to understand each person's concerns and creates an approach that feels personalized and thoughtful rather than one-size-fits-all. I would highly recommend experiencing the integrative approach that Dr. Aparna and Svaparna Health bring to supporting health and wellness.",
-      author: "Sophia Martinez",
+      author: "Dr. Suri",
       leftVideo: "assets/testimonial-videos/DrSuriTestimonial.mp4",
       rightImage: "assets/testimonial-videos/testimonial-img2.png",
       platform: "Google reviews",

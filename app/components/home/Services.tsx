@@ -35,8 +35,7 @@ export default function Services({ onSelectService }: ServicesProps) {
       title: "Orthopedic & Sports Rehab",
       description:
         "Relief from low back pain, neck pain, ankle sprains, and sports injuries.",
-      image:
-        "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=800&q=80",
+      image: "assets/images/7.jpg",
     },
     {
       id: "msrv-surgery",
