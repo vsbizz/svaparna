@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Plus, Minus, ChevronRight } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
-
+import { useRouter } from "next/navigation";
 interface FAQItem {
   id: number;
   question: string;
@@ -9,6 +9,8 @@ interface FAQItem {
 }
 
 export default function FAQ() {
+  const router = useRouter();
+
   const [openId, setOpenId] = useState<number | null>(null);
 
   const faqs: FAQItem[] = [
@@ -78,7 +80,7 @@ export default function FAQ() {
             <div className="pt-4">
               <button
                 id="btn-faq-view-more"
-                onClick={handleScrollToBooking}
+                onClick={() => router.push("/faq")}
                 className="group inline-flex items-center gap-2 font-bold text-sm px-8 py-3.5 rounded-full shadow-md hover:shadow-xl hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 pointer-events-auto cursor-pointer bg-primary-brand/15 text-primary-brand hover:text-white hover:bg-[#52133a]"
               >
                 View More

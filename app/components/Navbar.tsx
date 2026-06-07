@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Phone, Calendar, Menu, X, Sparkles } from "lucide-react";
 import { NavItem } from "../../types";
+import Link from "next/link";
 
 interface NavbarProps {
   navItems: NavItem[];
@@ -51,9 +52,9 @@ export default function Navbar({ navItems, onBookClick }: NavbarProps) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-14">
           {/* Logo Brand Brand Section */}
-          <a
+          <Link
             id="nav-logo"
-            href="#home"
+            href="/"
             className="flex items-center space-x-2 group focus:outline-hidden"
           >
             {/* Custom SVG logo mimicking Svaparna (Self-Leaf / Health Flower) */}
@@ -62,7 +63,7 @@ export default function Navbar({ navItems, onBookClick }: NavbarProps) {
               alt="Logo"
               className="h-10 sm:h-12 md:h-14 lg:h-16 xl:h-20 w-auto group-hover:scale-105 transition-transform duration-300"
             />
-          </a>
+          </Link>
 
           {/* Desktop Navigation Linkages */}
           <div className="hidden lg:flex items-center space-x-1">

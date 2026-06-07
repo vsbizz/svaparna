@@ -18,7 +18,7 @@ import {
 } from "lucide-react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Autoplay } from "swiper/modules";
-
+import { useRouter } from "next/navigation";
 import "swiper/css";
 import "swiper/css/navigation";
 
@@ -28,6 +28,7 @@ interface ServicesProps {
 
 export default function Services({ onSelectService }: ServicesProps) {
   const [isExpanded, setIsExpanded] = useState(false);
+  const router = useRouter();
 
   const mainServices = [
     {
@@ -272,19 +273,11 @@ export default function Services({ onSelectService }: ServicesProps) {
         <div className="text-center">
           <button
             id="btn-view-all-services-toggle"
-            onClick={() => setIsExpanded(!isExpanded)}
+            onClick={() => router.push("/services")}
             className="group inline-flex items-center gap-2 font-bold text-sm px-8 py-3.5 rounded-full shadow-md hover:shadow-xl hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 pointer-events-auto cursor-pointer bg-primary-brand/15 text-primary-brand hover:text-white hover:bg-[#52133a]"
           >
-            <span>
-              {isExpanded
-                ? "Close Specialized Care Catalog"
-                : "View All Services"}
-            </span>
-            {isExpanded ? (
-              <ChevronUp className="w-4 h-4 text-primary-brand group-hover:text-white group-hover:translate-x-1 transition-transform" />
-            ) : (
-              <ChevronRight className="w-4 h-4 text-primary-brand group-hover:text-white group-hover:translate-x-1 transition-transform" />
-            )}
+            <span>View All Services</span>
+            <ChevronRight className="w-4 h-4 text-primary-brand group-hover:text-white group-hover:translate-x-1 transition-transform" />
           </button>
         </div>
 
