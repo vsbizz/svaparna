@@ -239,7 +239,7 @@ export default function FounderProfile() {
                   mentorships in **Kerala-style authentic panchakarma
                   therapeutics** and finished advanced accreditations directly
                   with USA &apos; s premier Ayurvedic training councils. The
-                  outcome is **Svaparna Health**—a haven where each patient
+                  outcome is **Svaparna Health** a haven where each patient
                   holds control over their path, restoring natural biomechanics
                   while achieving deep mental, physiological, and emotional
                   balance.

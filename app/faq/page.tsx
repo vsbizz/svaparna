@@ -28,12 +28,12 @@ const faqs: FaqItem[] = [
     answer:
       "Physiotherapy focuses on physical rehabilitation, movement disorders, and pain management (available in-clinic in Mumbai or online within India). The Ayurvedic consultation is holistic health counseling focused on evaluating your Prakrti (individual constitution), imbalances, gut health and providing dietary, lifestyle, and herbal recommendations (available online worldwide).",
   },
-  {
-    question:
-      "How does the Ayurvedic consultation work alongside physical therapy?",
-    answer:
-      "While Physiotherapy addresses the structural and musculoskeletal causes of your pain, Ayurvedic principles support your body's internal healing environment. Together, they treat the whole person, optimizing recovery and preventing future injuries rather than just masking symptoms. Ayurvedic recommendations based on diet, lifestyle and home remedies are provided to better support recovery.",
-  },
+  // {
+  //   question:
+  //     "How does the Ayurvedic consultation work alongside physical therapy?",
+  //   answer:
+  //     "While Physiotherapy addresses the structural and musculoskeletal causes of your pain, Ayurvedic principles support your body's internal healing environment. Together, they treat the whole person, optimizing recovery and preventing future injuries rather than just masking symptoms. Ayurvedic recommendations based on diet, lifestyle and home remedies are provided to better support recovery.",
+  // },
   {
     question: "Can I consult with Dr. Aparna from outside India?",
     answer:
