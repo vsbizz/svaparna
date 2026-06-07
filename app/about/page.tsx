@@ -604,7 +604,13 @@ export default function AboutPage() {
             <motion.div variants={fadeUp} className="relative">
               <div className="relative overflow-hidden rounded-[2.75rem] border border-primary-brand/10 bg-white/80 shadow-sm">
                 {/* image */}
-                <div className="relative min-h-[560px] bg-[url('assets/images/handShake.jpg')] bg-cover bg-center">
+                <div
+                  className="relative min-h-[560px] bg-cover bg-center"
+                  style={{
+                    backgroundImage: "url('/assets/images/handShake.jpg')",
+                  }}
+                >
+                  {" "}
                   <div className="absolute inset-0 bg-gradient-to-b from-white/10 via-[#FCFBF8]/20 to-[#FCFBF8]/92" />
                 </div>
 
@@ -713,15 +719,15 @@ export default function AboutPage() {
                 <div
                   className="absolute inset-0 bg-cover bg-center opacity-20"
                   style={{
-                    backgroundImage: "url('/assets/images/3.jpg')",
+                    backgroundImage: "url('/assets/images/2.jpg')",
                   }}
                 />
 
-                <div className="absolute inset-0 bg-white/70" />
                 <div
-                  className="absolute inset-0 bg-white/85"
+                  className="absolute inset-0 bg-white/30"
                   aria-hidden="true"
                 />
+
                 <div className="relative z-10">
                   <div className="flex items-center gap-3">
                     <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-primary-brand/5">
@@ -794,11 +800,14 @@ export default function AboutPage() {
                 className="relative overflow-hidden rounded-[2.5rem] border border-primary-brand/10 bg-white/90 p-8 backdrop-blur-sm"
               >
                 <div
-                  className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1506629905607-d9c38f5d4e5d?auto=format&fit=crop&w=1400&q=80')] bg-cover bg-center opacity-[0.08]"
-                  aria-hidden="true"
+                  className="absolute inset-0 bg-cover bg-center opacity-20"
+                  style={{
+                    backgroundImage: "url('/assets/images/ayurveda.jpg')",
+                  }}
                 />
+
                 <div
-                  className="absolute inset-0 bg-white/85"
+                  className="absolute inset-0 bg-white/30"
                   aria-hidden="true"
                 />
                 <div className="relative z-10">
