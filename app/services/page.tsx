@@ -369,15 +369,13 @@ export default function ServicesPage() {
               ))}
             </div>
 
-            <div className="lg:sticky lg:top-28">
-              <div className="overflow-hidden rounded-[2.5rem] border border-primary-brand/10 bg-white shadow-sm">
-                <img
-                  src="assets/images/4.jpg"
-                  alt="Physiotherapy care"
-                  className="aspect-[4/5] w-full object-cover"
-                  referrerPolicy="no-referrer"
-                />
-              </div>
+            <div className="group overflow-hidden rounded-[2.5rem] border border-primary-brand/10 bg-white shadow-sm">
+              <img
+                src="assets/images/4.jpg"
+                alt="Physiotherapy care"
+                className="aspect-[4/5] w-full object-cover transition-all duration-700 ease-out group-hover:scale-105 group-hover:brightness-105"
+                referrerPolicy="no-referrer"
+              />
             </div>
 
             <div className="space-y-0">
@@ -399,11 +397,11 @@ export default function ServicesPage() {
           transition={{ duration: 0.5, ease: "easeOut" }}
         >
           <div className="grid gap-8 lg:grid-cols-[0.92fr_1.08fr] lg:items-center">
-            <div className="overflow-hidden rounded-[2.5rem] border border-primary-brand/10 bg-white shadow-sm">
+            <div className="group overflow-hidden rounded-[2.5rem] border border-primary-brand/10 bg-white shadow-sm">
               <img
                 src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&q=80&w=1600"
                 alt="Ayurvedic wellness"
-                className="aspect-[4/5] w-full object-cover"
+                className="aspect-[4/5] w-full object-cover transition-all duration-700 ease-out group-hover:scale-105 group-hover:brightness-105"
                 referrerPolicy="no-referrer"
               />
             </div>

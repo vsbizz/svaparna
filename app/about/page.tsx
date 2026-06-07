@@ -166,11 +166,11 @@ export default function AboutPage() {
               variants={fadeUp}
               className="relative mx-auto w-full max-w-md"
             >
-              <div className="overflow-hidden rounded-[2.5rem]">
+              <div className="group overflow-hidden rounded-[2.5rem]">
                 <img
                   src="/assets/images/DrAparna.png"
                   alt="Dr. Aparna Sekhar"
-                  className="aspect-[4/5] w-full object-cover"
+                  className="aspect-[4/5] w-full object-cover transition-all duration-700 ease-out group-hover:scale-105 group-hover:brightness-105"
                 />
               </div>
             </motion.div>
@@ -365,11 +365,11 @@ export default function AboutPage() {
             >
               <div className="rounded-[2.75rem] border border-primary-brand/10 bg-white p-8">
                 <div className="rounded-[2.25rem] border border-primary-brand/10 bg-white p-5">
-                  <div className="overflow-hidden rounded-[1.75rem]">
+                  <div className="group overflow-hidden rounded-[1.75rem]">
                     <img
                       src="/assets/images/3.jpg"
                       alt="Dr. Aparna Sekhar"
-                      className="aspect-[4/6] w-full object-cover"
+                      className="aspect-[4/6] w-full object-cover transition-all duration-700 ease-out group-hover:scale-105 group-hover:brightness-105"
                     />
                   </div>
                 </div>
@@ -438,12 +438,11 @@ export default function AboutPage() {
               viewport={{ once: true, margin: "-80px" }}
               transition={{ duration: 0.7 }}
             >
-              <div className="overflow-hidden rounded-[2.5rem]">
+              <div className="group overflow-hidden rounded-[2.5rem]">
                 <img
                   src="/assets/images/ayurveda-image.webp"
                   alt="Holistic consultation setting"
-                  className="aspect-[4/5] w-full object-cover"
-                  referrerPolicy="no-referrer"
+                  className="aspect-[4/5] w-full object-cover transition-all duration-700 ease-out group-hover:scale-105 group-hover:brightness-105"
                 />
               </div>
             </motion.div>
@@ -601,16 +600,17 @@ export default function AboutPage() {
             </motion.div>
 
             {/* Right visual narrative */}
-            <motion.div variants={fadeUp} className="relative">
+            <motion.div variants={fadeUp} className="group relative">
+              {" "}
               <div className="relative overflow-hidden rounded-[2.75rem] border border-primary-brand/10 bg-white/80 shadow-sm">
                 {/* image */}
-                <div
-                  className="relative min-h-[560px] bg-cover bg-center"
-                  style={{
-                    backgroundImage: "url('/assets/images/handShake.jpg')",
-                  }}
-                >
-                  {" "}
+                <div className="relative min-h-[560px] overflow-hidden">
+                  <div
+                    className="absolute inset-0 bg-cover bg-center transition-all duration-700 ease-out group-hover:scale-105 group-hover:brightness-105"
+                    style={{
+                      backgroundImage: "url('/assets/images/handShake.jpg')",
+                    }}
+                  />{" "}
                   <div className="absolute inset-0 bg-gradient-to-b from-white/10 via-[#FCFBF8]/20 to-[#FCFBF8]/92" />
                 </div>
 
@@ -714,10 +714,11 @@ export default function AboutPage() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true, margin: "-80px" }}
                 transition={{ duration: 0.7 }}
-                className="relative overflow-hidden rounded-[2.5rem] border border-primary-brand/10 bg-white/90 p-8 backdrop-blur-sm"
+                whileHover={{ y: -8 }}
+                className="group relative overflow-hidden rounded-[2.5rem] border border-primary-brand/10 bg-white/90 p-8 backdrop-blur-sm transition-all duration-500"
               >
                 <div
-                  className="absolute inset-0 bg-cover bg-center opacity-20"
+                  className="absolute inset-0 bg-cover bg-center opacity-20 transition-all duration-700 ease-out group-hover:scale-110 group-hover:opacity-30"
                   style={{
                     backgroundImage: "url('/assets/images/2.jpg')",
                   }}
@@ -797,10 +798,11 @@ export default function AboutPage() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true, margin: "-80px" }}
                 transition={{ duration: 0.7 }}
-                className="relative overflow-hidden rounded-[2.5rem] border border-primary-brand/10 bg-white/90 p-8 backdrop-blur-sm"
+                whileHover={{ y: -8 }}
+                className="group relative overflow-hidden rounded-[2.5rem] border border-primary-brand/10 bg-white/90 p-8 backdrop-blur-sm transition-all duration-500"
               >
                 <div
-                  className="absolute inset-0 bg-cover bg-center opacity-20"
+                  className="absolute inset-0 bg-cover bg-center opacity-20 transition-all duration-700 ease-out group-hover:scale-110 group-hover:opacity-30"
                   style={{
                     backgroundImage: "url('/assets/images/ayurveda.jpg')",
                   }}
