@@ -36,21 +36,21 @@ export default function Services({ onSelectService }: ServicesProps) {
       title: "Orthopedic & Sports Rehab",
       description:
         "Relief from low back pain, neck pain, ankle sprains, and sports injuries.",
-      image: "assets/images/7.jpg",
+      image: "assets/images/sport.webp",
     },
     {
       id: "msrv-surgery",
       title: "Pre & Post-Surgical Rehabilitation",
       description:
         "Guided recovery to restore function, mobility, and strength after surgery.",
-      image: "assets/images/Pre-Post-Surgical-Rehabilitation.webp",
+      image: "assets/images/Pre-Post-Surgical-Rehabilitation.jpg",
     },
     {
       id: "msrv-vestibular",
       title: "Vestibular Rehabilitation",
       description:
         "Specialized assessment and treatment for vertigo (BPPV), dizziness, and balance disorders.",
-      image: "assets/images/Vestibular-Rehabilitation.png",
+      image: "assets/images/Vestibular-Rehabilitation.webp",
     },
     {
       id: "msrv-pregnancy",
@@ -71,7 +71,7 @@ export default function Services({ onSelectService }: ServicesProps) {
       title: "Pediatric Care",
       description:
         "Gentle management of bowel and bladder issues in children such as constipation and bedwetting.",
-      image: "assets/images/Pediatric-Care.webp",
+      image: "assets/images/kids.webp",
     },
   ];
 
