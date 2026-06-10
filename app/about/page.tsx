@@ -367,11 +367,10 @@ export default function AboutPage() {
                   >
                     {/* Large muted number */}
                     <span
-                      className="shrink-0 leading-none font-light select-none w-14 text-right pt-1"
+                      className="shrink-0 leading-none font-light select-none w-14 text-[#c8a358] text-right pt-1"
                       style={{
                         fontFamily: "'Cormorant Garamond', Georgia, serif",
                         fontSize: "2.5rem",
-                        color: "rgba(99,26,71,0.10)",
                       }}
                     >
                       {String(index + 1).padStart(2, "0")}
@@ -401,103 +400,143 @@ export default function AboutPage() {
       </section>
 
       {/* ── 3. JOURNEY TO AYURVEDA ───────────────────────────────────────── */}
-      <section id="journey" className="bg-white py-20 sm:py-28">
+      <section id="journey" className="bg-white py-20 sm:py-28 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <SectionDivider label="The Journey to Ayurveda" />
-
+          {/* Header row */}
           <motion.div
-            className="mt-14"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.55 }}
+            className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-5
+                     pb-10 mb-0 border-b border-primary-brand/8"
           >
-            <div className="mb-12">
-              <SectionLabel>The Journey to Ayurveda</SectionLabel>
+            <div>
+              <span className="text-[10px] font-bold uppercase tracking-[0.22em] text-[#9b6b3a] font-mono block mb-4">
+                The Journey to Ayurveda
+              </span>
               <h2
-                className="mt-5 text-3xl sm:text-4xl lg:text-5xl font-normal text-primary-brand leading-tight"
+                className="text-4xl sm:text-5xl font-normal text-primary-brand tracking-tight leading-[1.05]"
                 style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}
               >
-                Discovering the Missing Piece
+                Discovering the
+                <br className="hidden sm:block" /> Missing Piece
               </h2>
             </div>
-
-            {/* Steps — large number + content */}
-            <div className="space-y-0">
-              {journeySteps.map((step, index) => (
-                <motion.div
-                  key={step.num}
-                  initial={{ opacity: 0, x: -16 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true, margin: "-60px" }}
-                  transition={{ duration: 0.45, delay: index * 0.08 }}
-                  className={`grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 py-10 border-b border-primary-brand/8 ${
-                    step.highlight
-                      ? "bg-[#fbf5f9] -mx-4 px-4 sm:-mx-6 sm:px-6 lg:-mx-8 lg:px-8"
-                      : ""
-                  }`}
-                >
-                  {/* Giant number */}
-                  <div className="lg:col-span-2 flex items-start">
-                    <span
-                      className="font-light leading-none select-none"
-                      style={{
-                        fontFamily: "'Cormorant Garamond', Georgia, serif",
-                        fontSize: "clamp(3rem, 6vw, 5rem)",
-                        color: step.highlight
-                          ? "#631a47"
-                          : "rgba(99,26,71,0.12)",
-                        lineHeight: 1,
-                      }}
-                    >
-                      {step.num}
-                    </span>
-                  </div>
-
-                  {/* Content */}
-                  <div className="lg:col-span-10">
-                    <h3
-                      className="text-2xl sm:text-3xl font-normal text-primary-brand leading-snug mb-4"
-                      style={{
-                        fontFamily: "'Cormorant Garamond', Georgia, serif",
-                      }}
-                    >
-                      {step.title}
-                    </h3>
-                    <p className="text-base leading-8 text-neutral-700 max-w-3xl">
-                      {step.body}
-                    </p>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
+            <p className="text-sm text-neutral-500 leading-relaxed max-w-xs shrink-0">
+              A practitioner&apos;s path from conventional physiotherapy to
+              integrative healing.
+            </p>
           </motion.div>
+
+          {/*
+          2×2 quadrant grid.
+          gap-px + bg-primary-brand/8 on the parent = hairline separators
+          between cells — no card borders needed.
+          Step 04 (highlight) inverts to dark plum.
+        */}
+          <div
+            className="grid grid-cols-1 sm:grid-cols-2 gap-px"
+            style={{ background: "rgba(99,26,71,0.08)" }}
+          >
+            {journeySteps.map((step, index) => (
+              <motion.div
+                key={step.num}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-50px" }}
+                transition={{ duration: 0.45, delay: index * 0.08 }}
+                className="relative overflow-hidden p-8 sm:p-10 flex flex-col group cursor-default transition-colors duration-300"
+                style={{
+                  background: step.highlight ? "#631a47" : "#fffef7",
+                }}
+              >
+                {/* Hover: top accent bar draws left-to-right */}
+                <div
+                  className="absolute top-0 left-0 right-0 h-[2px] origin-left scale-x-0
+                           group-hover:scale-x-100 transition-transform duration-500 ease-out"
+                  style={{
+                    background: step.highlight
+                      ? "linear-gradient(90deg, #9b6b3a, rgba(155,107,58,0.2))"
+                      : "linear-gradient(90deg, #9b6b3a, #631a47, transparent)",
+                  }}
+                />
+
+                {/* Hover: subtle background tint shift */}
+                <div
+                  className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
+                  style={{
+                    background: step.highlight
+                      ? "rgba(155,107,58,0.04)"
+                      : "rgba(99,26,71,0.03)",
+                  }}
+                />
+
+                {/* Amber accent line — grows on hover */}
+                <div
+                  className="relative h-px mb-6 w-8 group-hover:w-14 transition-all duration-500"
+                  style={{
+                    background: step.highlight
+                      ? "linear-gradient(90deg, #9b6b3a, transparent)"
+                      : "linear-gradient(90deg, rgba(155,107,58,0.5), transparent)",
+                  }}
+                />
+
+                {/* Title */}
+                <h3
+                  className="relative leading-snug mb-4 transition-all duration-300
+                           group-hover:translate-x-0.5"
+                  style={{
+                    fontFamily: "'Cormorant Garamond', Georgia, serif",
+                    fontSize: "clamp(1.15rem, 2.2vw, 1.4rem)",
+                    color: step.highlight ? "#ffffff" : "#2d1a26",
+                    fontWeight: step.highlight ? 600 : 400,
+                  }}
+                >
+                  {step.title}
+                </h3>
+
+                {/* Body */}
+                <p
+                  className="relative text-sm leading-7 flex-1 transition-colors duration-300"
+                  style={{
+                    color: step.highlight ? "#faf7f1" : "#5a3d4e",
+                  }}
+                >
+                  {step.body}
+                </p>
+
+                {/* Step 04: bottom label badge */}
+                {step.highlight && (
+                  <div className="mt-8 inline-flex items-center gap-2 self-start">
+                    <div
+                      className="rounded-full border border-white/12 px-3 py-1.5"
+                      style={{ background: "rgba(255,255,255,0.06)" }}
+                    >
+                      <span className="text-[9px] uppercase tracking-[0.2em] flex font-bold text-[#faf7f1]">
+                        Integrated Practice · Today
+                      </span>
+                    </div>
+                  </div>
+                )}
+              </motion.div>
+            ))}
+          </div>
         </div>
       </section>
-
       {/* ── 4. PHILOSOPHY ────────────────────────────────────────────────── */}
       <section
         id="philosophy"
-        className="bg-[#1a0d14] py-20 sm:py-28 relative overflow-hidden"
+        className=" py-20 sm:py-28 relative overflow-hidden bg-[#fbf5f9]"
       >
         {/* Decorative ambient */}
         <div
           aria-hidden
           className="absolute inset-0 pointer-events-none opacity-20"
-          style={{
-            backgroundImage:
-              "radial-gradient(circle at 20% 50%, #631a47 0%, transparent 60%), radial-gradient(circle at 80% 30%, #9b6b3a 0%, transparent 55%)",
-          }}
         />
 
         {/* Top accent */}
-        <div
-          className="absolute top-0 left-0 right-0 h-[2px]"
-          style={{
-            background:
-              "linear-gradient(90deg, transparent, #9b6b3a, #631a47, transparent)",
-          }}
-        />
+        <div className="absolute top-0 left-0 right-0 h-[2px] " />
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <motion.div
@@ -507,36 +546,24 @@ export default function AboutPage() {
             transition={{ duration: 0.6 }}
           >
             {/* Label */}
-            <div className="text-center mb-12">
-              <div className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/8 px-4 py-1.5 text-xs font-medium uppercase tracking-[0.28em] text-white/60 mb-8">
+            <div className="text-center mb-2">
+              <div className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/8 px-4 py-1.5 text-xs font-medium uppercase tracking-[0.28em] text-primary-brand mb-5">
                 Our Philosophy
               </div>
 
-              <h2
-                className="text-3xl sm:text-4xl lg:text-6xl font-normal text-white leading-tight tracking-tight max-w-4xl mx-auto"
-                style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}
-              >
+              <h2 className="text-3xl sm:text-4xl lg:text-6xl font-normal text-primary-brand leading-tight tracking-tight max-w-4xl mx-auto">
                 Helping You Return to Your Natural State of Balance
               </h2>
             </div>
 
             {/* Pull-quote — SVAPARNA */}
             <div
-              className="max-w-3xl mx-auto border border-white/12 rounded-none p-8 sm:p-12 mb-14"
+              className="max-w-3xl mx-auto border border-white/12 rounded-none p-4 sm:p-8 mb-5"
               style={{ background: "rgba(255,255,255,0.04)" }}
             >
               <div className="flex items-start gap-5">
-                <Sparkles className="w-5 h-5 text-[#9b6b3a] shrink-0 mt-1" />
                 <div>
-                  <p className="text-[10px] uppercase tracking-[0.28em] text-white/40 font-mono font-bold mb-4">
-                    Guiding Principle
-                  </p>
-                  <p
-                    className="text-white text-xl sm:text-2xl leading-relaxed font-normal"
-                    style={{
-                      fontFamily: "'Cormorant Garamond', Georgia, serif",
-                    }}
-                  >
+                  <p className="text-primary-brand text-xl sm:text-2xl leading-relaxed font-normal">
                     SVAPARNA (स्वपर्णा) is a Sanskrit word meaning
                     self-sustaining and needing nothing external to thrive.
                   </p>
@@ -545,7 +572,7 @@ export default function AboutPage() {
             </div>
 
             {/* Philosophy body */}
-            <p className="text-white/65 text-base leading-8 max-w-3xl mx-auto text-center mb-14">
+            <p className="text-black text-base leading-8 max-w-3xl mx-auto text-center mb-14">
               It is a reflection of my own name (Aparna) but more importantly,
               it is the foundational philosophy for my clients: helping you
               return to your true self (SVA-RUPA) and achieve a state of lasting
@@ -559,7 +586,7 @@ export default function AboutPage() {
               {[
                 {
                   icon: HeartPulse,
-                  text: "Self-sustaining and needing nothing external to thrive.",
+                  text: "Self-sustaining and self-thriving.",
                 },
                 { icon: Leaf, text: "Helping you return to your true self." },
                 {
@@ -571,13 +598,12 @@ export default function AboutPage() {
                 return (
                   <div
                     key={i}
-                    className="flex items-start gap-4 p-7 sm:p-8"
-                    style={{ background: "rgba(26,13,20,0.85)" }}
+                    className="flex items-start gap-4 p-7 sm:p-8 bg-[#631a47]"
                   >
                     <div className="w-9 h-9 rounded-full border border-white/12 flex items-center justify-center shrink-0">
-                      <Icon className="w-4 h-4 text-[#9b6b3a]" />
+                      <Icon className="w-4 h-4 text-[#c8a358]" />
                     </div>
-                    <p className="text-sm text-white/60 leading-7">{p.text}</p>
+                    <p className="text-lg text-white leading-7">{p.text}</p>
                   </div>
                 );
               })}
@@ -737,7 +763,7 @@ export default function AboutPage() {
       </section>
 
       {/* ── 6. WHAT TO EXPECT ────────────────────────────────────────────── */}
-      <section id="expectations" className="bg-[#fbf5f9] py-20 sm:py-28">
+      <section id="expectations" className="bg-primary-brand py-20 sm:py-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionDivider label="The Svaparna Experience" />
 

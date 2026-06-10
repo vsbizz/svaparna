@@ -66,7 +66,7 @@ export default function TreatmentPackages() {
                     Consultation Pricing
                   </h3>
                   <p className="mt-3 text-sm leading-7 text-neutral-700">
-                    Online Physiotherapy in India
+                    Physiotherapy in India
                   </p>
 
                   <div className="mt-7 space-y-4">
@@ -146,10 +146,10 @@ export default function TreatmentPackages() {
               <div className="space-y-10">
                 <div>
                   <h3 className="font-serif text-2xl font-bold text-primary-brand">
-                    USA Consultation Pricing
+                    Consultation Pricing
                   </h3>
                   <p className="mt-3 text-sm leading-7 text-neutral-700">
-                    Online Ayurvedic consultation across usa
+                    Online Ayurvedic consultation across USA & India
                   </p>
 
                   <div className="mt-7 space-y-4">
@@ -159,10 +159,10 @@ export default function TreatmentPackages() {
                           Initial Consultation
                         </span>
                         <div className="flex flex-col items-end">
-                          <span className="text-lg font-semibold text-primary-brand">
-                            $150
+                          <span className="text-md font-semibold text-primary-brand">
+                            $150 (online-USA)
                           </span>
-                          <span className="text-sm font-semibold text-black">
+                          <span className="text-md font-semibold text-primary-brand">
                             ₹2,000 (India)
                           </span>
                         </div>
@@ -174,10 +174,10 @@ export default function TreatmentPackages() {
                           Follow-up Session
                         </span>
                         <div className="flex flex-col items-end">
-                          <span className="text-lg font-semibold text-primary-brand">
-                            $75
+                          <span className="text-md font-semibold text-primary-brand">
+                            $75 (online-USA)
                           </span>
-                          <span className="text-sm font-semibold text-black">
+                          <span className="text-md font-semibold text-primary-brand">
                             ₹1,500 (India)
                           </span>
                         </div>
