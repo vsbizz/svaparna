@@ -300,7 +300,7 @@ export default function ServicesPage() {
               At Svaparna Health, We do not just treat the symptom. By blending
               the biomechanical precision of evidence-based Physiotherapy with
               the holistic wisdom of Ayurvedic Principles, we actively support
-              your body &apos; s natural healing environment. Every exercise is
+              your body&apos;s natural healing environment. Every exercise is
               prescribed with a deep medical rationale, and every lifestyle
               recommendation is tailored to your unique constitution.
             </p>

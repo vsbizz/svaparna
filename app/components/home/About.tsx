@@ -155,7 +155,7 @@ export default function FounderProfile() {
                 onClick={() => router.push("/about")}
                 className="group inline-flex items-center gap-2 font-bold text-sm px-8 py-3.5 rounded-full shadow-md hover:shadow-xl hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 pointer-events-auto cursor-pointer bg-primary-brand/15 text-primary-brand hover:text-white hover:bg-[#52133a]"
               >
-                Read Dr. Aparna &apos; s Full Story
+                Read Dr. Aparna&apos;s Full Story
                 <ChevronRight className="w-4 h-4 text-primary-brand group-hover:text-white group-hover:translate-x-1 transition-transform" />
               </button>
             </div>
@@ -244,7 +244,7 @@ export default function FounderProfile() {
                   To complete this therapeutic union, she underwent deep
                   mentorships in **Kerala-style authentic panchakarma
                   therapeutics** and finished advanced accreditations directly
-                  with USA &apos; s premier Ayurvedic training councils. The
+                  with USA&apos;s premier Ayurvedic training councils. The
                   outcome is **Svaparna Health** a haven where each patient
                   holds control over their path, restoring natural biomechanics
                   while achieving deep mental, physiological, and emotional
