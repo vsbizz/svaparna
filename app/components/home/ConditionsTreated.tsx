@@ -238,7 +238,7 @@ export default function ConditionsTreatedCombined({
                         </h3>
 
                         {/* subInfo expands on active */}
-                        <AnimatePresence initial={false}>
+                        {/* <AnimatePresence initial={false}>
                           {isActive && (
                             <motion.p
                               key="sub"
@@ -255,7 +255,7 @@ export default function ConditionsTreatedCombined({
                               {item.subInfo}
                             </motion.p>
                           )}
-                        </AnimatePresence>
+                        </AnimatePresence> */}
                       </div>
 
                       <motion.div
