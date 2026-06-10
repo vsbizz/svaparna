@@ -31,7 +31,7 @@ export default function Home() {
       <Contact /> */}
       <About />
       <Consultations onSelectType={() => {}} />
-      <Services onSelectService={() => {}} />
+      <Services />
       <ConditionsTreated onBookConsultation={() => {}} />
       <OurProcess />
       <Difference onBookClick={() => {}} />
