@@ -106,17 +106,22 @@ export default function Footer({ onBookClick }: FooterProps) {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-4 relative z-10">
           {/* 1. Header Branding Icon Block */}
           <div className="flex justify-center px-4">
-            <div className="flex flex-col items-center text-center space-y-4 py-6">
-              {/* Serif Display Clinic title name */}
+            <div className="flex flex-col items-center text-center space-y-4 py-6 max-w-xl">
               <img
-                src="assets/images/bg-removed-logo.png"
+                src="/assets/images/bg-removed-logo.png"
                 alt="Logo"
-                className="h-10 sm:h-12 md:h-14 lg:h-16 xl:h-24 w-auto group-hover:scale-105 transition-transform duration-300"
+                className="h-20 sm:h-24 md:h-28 lg:h-32 w-auto transition-transform duration-300"
               />
+              <p className="text-sm font-semibold text-white leading-relaxed tracking-wide">
+                Modern Recovery. Timeless Healing.
+              </p>
+              <p className="text-xs font-light text-white/80 leading-relaxed max-w-sm">
+                Where modern clinical approaches to health meet the ancient wisdom of Ayurvedic science. International standards of care with direct access to a senior specialist.
+              </p>
             </div>
           </div>
           {/* 3. Comprehensive Multi-column navigation links */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 text-left pb-12 pt-8">
+          <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-6 md:gap-12 text-left pb-12 pt-8">
             {/* Menu 1 - About */}
             <div className="space-y-4">
               <h4 className="text-[13px] tracking-[0.25em] text-gold-start font-mono uppercase">
@@ -313,23 +318,23 @@ export default function Footer({ onBookClick }: FooterProps) {
               </ul>
             </div>
           </div>
-          <div className="space-y-0.5 text-center flex item-center gap-14 flex justify-center">
+          <div className="space-y-0.5 text-center flex flex-col sm:flex-row items-center gap-8 sm:gap-14 justify-center">
             <div className="address">
               <span className="text-[12px] font-bold uppercase tracking-[0.22em] text-gold-start font-mono block">
                 ADDRESS
               </span>
-              <p className="font-sans text-md  font-light leading-relaxed select-text text-white">
-                200 Sutter St Suite 602 San <br />
-                Francisco, CA 94108
+              <p className="font-sans text-md font-light leading-relaxed select-text text-white">
+                Mumbai, India <span className="text-gold-start/70 text-xs">(Coming Soon)</span><br />
+                Online: India & USA
               </p>
             </div>
             <div className="hours">
               <span className="text-[12px] font-bold uppercase tracking-[0.22em] text-gold-start font-mono block">
-                OFFICE HOURS
+                CONTACT
               </span>
-              <div className="font-sans text-sm  font-light leading-relaxed select-text text-white">
-                <p>Mon–Thu: 7:30am – 7:30pm</p>
-                <p>Friday: 8:00am – 4:30pm</p>
+              <div className="font-sans text-sm font-light leading-relaxed select-text text-white">
+                <p>contact@svaparnahealth.com</p>
+                <p>+91 98929 24914</p>
               </div>
             </div>
           </div>

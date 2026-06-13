@@ -38,7 +38,7 @@ export default function TreatmentPackages({
             </span>
           </div>
           <h2 className="font-serif text-3xl font-normal leading-tight tracking-tight text-primary-brand sm:text-4xl md:text-5xl">
-            Transparent Pricing & Healing Plans
+            Transparent Pricing & Structured Plans
           </h2>
         </div>
 
@@ -70,7 +70,7 @@ export default function TreatmentPackages({
                     Consultation Pricing
                   </h3>
                   <p className="mt-3 text-sm leading-7 text-neutral-700">
-                    Physiotherapy in India
+                    Inperson in Mumbai and online Physiotherapy across India
                   </p>
 
                   <div className="mt-7 space-y-4">
@@ -112,9 +112,8 @@ export default function TreatmentPackages({
                           6 Sessions
                         </h4>
                         <p className="mt-1 text-sm leading-6 text-neutral-700">
-                          Ideal for focused short-term recovery, pain
-                          management, mobility improvement, and restoring
-                          movement confidence.
+                          Ideal for focused short-term recovery and pain
+                          management.
                         </p>
                       </div>
                       <span className="shrink-0 text-lg font-semibold text-primary-brand">
@@ -161,7 +160,7 @@ export default function TreatmentPackages({
                     Consultation Pricing
                   </h3>
                   <p className="mt-3 text-sm leading-7 text-neutral-700">
-                    Online Ayurvedic consultation across USA & India
+                    Online Ayurvedic consultation (USA & India) and Inperson in Mumbai
                   </p>
 
                   <div className="mt-7 space-y-4">
@@ -206,14 +205,6 @@ export default function TreatmentPackages({
                 >
                   Book Ayurvedic Consultation
                 </button>
-
-                <div className="rounded-[2rem] border border-primary-brand/10 bg-white/80 p-5 shadow-sm">
-                  <p className="text-sm leading-7 text-neutral-700">
-                    Ayurvedic care is available across usa, with personalized
-                    guidance tailored to your constitution, lifestyle, and
-                    healing goals.
-                  </p>
-                </div>
               </div>
             </motion.div>
           </div>

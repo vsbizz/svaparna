@@ -30,13 +30,13 @@ export default function Difference({ onBookClick }: DifferenceProps) {
       id: "val-3",
       icon: <HeartHandshake className="w-8 h-8 text-primary-brand" />,
       title: "Integrative Approach",
-      desc: "We don't just treat the symptom. By blending Physiotherapy and Ayurvedic Healing Practices, we support your body's natural healing environment.",
+      desc: "We don't just treat the symptom. By blending Physiotherapy and Ayurvedic Practices, we support your body's natural healing environment.",
     },
     {
       id: "val-4",
       icon: <Award className="w-8 h-8 text-primary-brand" />,
       title: "Niche Specializations",
-      desc: "Pelvic floor, pediatric bowel/bladder, vestibular rehab, and postpartum recovery specialized clinical areas most standard outpatient therapy centers don't cover.",
+      desc: "Pelvic Floor, Pediatric Bowel/Bladder, Vestibular Rehab, and Postpartum Recovery: specialized clinical areas most standard therapy centers don't cover.",
     },
   ];
 
@@ -47,7 +47,7 @@ export default function Difference({ onBookClick }: DifferenceProps) {
     >
       {/* Outer rounded card duplicating the beautiful Flexora style but aligned to Svaparna brand guidelines */}
       <motion.div
-        className="relative max-w-9xl mx-auto rounded-[32px] md:rounded-[48px] overflow-hidden shadow-sm bg-neutral-50/90 border border-primary-brand/10 p-8 sm:p-12 md:p-16 flex flex-col items-center"
+        className="relative max-w-9xl mx-auto rounded-[24px] md:rounded-[48px] overflow-hidden shadow-sm bg-neutral-50/90 border border-primary-brand/10 p-5 sm:p-10 md:p-16 flex flex-col items-center"
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-100px" }}
@@ -66,17 +66,17 @@ export default function Difference({ onBookClick }: DifferenceProps) {
           </div>
 
           <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-normal text-primary-brand tracking-tight">
-            Expert Care, Every Single Session.
+            Expert Care, Every Single Session
           </h2>
         </div>
 
         {/* 4-Column / Grid Layout matching image spec */}
-        <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 w-full max-w-7xl mx-auto mb-12">
+        <div className="relative z-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 w-full max-w-7xl mx-auto mb-12">
           {values.map((v) => (
             <div
               key={v.id}
               id={v.id}
-              className="flex flex-col items-center text-center p-8 border border-primary-brand/5 rounded-[2rem] hover:ring-2 hover:ring-gold-start/40 hover:shadow-xl transition-all duration-300 group"
+              className="flex flex-col items-center text-center p-5 sm:p-8 border border-primary-brand/5 rounded-[2rem] hover:ring-2 hover:ring-gold-start/40 hover:shadow-xl transition-all duration-300 group"
             >
               {/* Icon Container with centered layout */}
               <div className="w-16 h-16 rounded-2xl bg-primary-brand/5 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-inner">

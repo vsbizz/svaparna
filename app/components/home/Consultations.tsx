@@ -13,11 +13,11 @@ import { motion } from "motion/react";
 import { useState } from "react";
 
 interface ConsultationSelectorSectionProps {
-  onSelectType: (type: "online" | "offline") => void;
+  onSelectType?: (type: "online" | "offline") => void;
 }
 
 export default function ConsultationSelectorSection({
-  onSelectType,
+  onSelectType: _onSelectType,
 }: ConsultationSelectorSectionProps) {
   const [showSoonNotice, setShowSoonNotice] = useState(false);
 
@@ -28,23 +28,17 @@ export default function ConsultationSelectorSection({
       status: "active",
       badgeColor: "bg-indigo-50 text-indigo-900 border-indigo-100",
       title: "Online Consultations (India)",
-      description: "Virtual Physiotherapy  delivered securely across India.",
+      description: "Virtual Physiotherapy and Ayurvedic Consultations delivered securely online across India.",
       features: [
-        "Virtual movement & musculoskeletal analysis",
-        "Guided home-rehabilitation exercise plans",
+        "Virtual movement and in-depth analysis",
+        "Guided home rehabilitation exercise plans",
         "Integrated Ayurvedic counseling",
       ],
       icon: <Laptop className="w-5 h-5 text-gold-start" />,
-      buttonText: "Explore India Services",
+      buttonText: "View Pricing & Book",
       action: () => {
-        onSelectType("online");
-        const el = document.getElementById("booking-modal-overlay");
-        if (!el) {
-          window.scrollTo({
-            top: document.body.scrollHeight,
-            behavior: "smooth",
-          });
-        }
+        const el = document.getElementById("pricing");
+        if (el) el.scrollIntoView({ behavior: "smooth" });
       },
     },
     {
@@ -55,24 +49,17 @@ export default function ConsultationSelectorSection({
         "bg-emerald-55 bg-primary-brand/10 text-primary-brand border-primary-brand/10",
       title: "Online Consultations (USA)",
       description:
-        "USA-certified Ayurvedic care and lifestyle coaching accross usa.",
+        "Ayurvedic assessment and guidance delivered securely online across USA.",
       features: [
-        "In-depth Prakrti (constitution) analysis",
+        "In-depth Prakriti (constitution) analysis",
         "Personalized dietary & lifestyle design",
         "Holistic herbal & supplement recommendations",
       ],
       icon: <Globe className="w-5 h-5 text-gold-start" />,
-      buttonText: "Explore USA Services",
+      buttonText: "View Pricing & Book",
       action: () => {
-        onSelectType("online");
-        const el = document.getElementById("booking-modal-overlay");
-        if (!el) {
-          // If modal trigger, click standard trigger or scroll
-          window.scrollTo({
-            top: document.body.scrollHeight,
-            behavior: "smooth",
-          });
-        }
+        const el = document.getElementById("pricing");
+        if (el) el.scrollIntoView({ behavior: "smooth" });
       },
     },
     {
@@ -82,7 +69,7 @@ export default function ConsultationSelectorSection({
       badgeColor: "bg-amber-100 text-amber-800 border-amber-200",
       title: "Offline Consultations (Mumbai)",
       description:
-        "Physiotherapy and Integrative Ayurvedic Care in person at Our Physical clinic.",
+        "Physiotherapy and Ayurvedic Consultations in person at our clinic.",
       features: [
         "Comprehensive 1-on-1 assessment",
         "Evidence-based in person care",
@@ -113,7 +100,7 @@ export default function ConsultationSelectorSection({
             </span>
           </div>
           <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-normal text-primary-brand tracking-tight">
-            CONSULTATION &nbsp; PATHWAYS
+            Choose Your Care Pathway
           </h2>
         </div>
 

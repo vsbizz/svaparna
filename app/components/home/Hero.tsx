@@ -28,7 +28,7 @@ export default function Hero({
 
       {/* Curved Container Wrapper */}
       <motion.div
-        className="relative max-w-9xl mx-auto rounded-[32px] md:rounded-[48px] overflow-hidden bg-neutral-900 min-h-[580px] lg:min-h-[680px] flex items-center justify-center"
+        className="relative max-w-9xl mx-auto rounded-[24px] md:rounded-[48px] overflow-hidden bg-neutral-900 min-h-[480px] sm:min-h-[540px] lg:min-h-[680px] flex items-center justify-center"
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
@@ -49,9 +49,9 @@ export default function Hero({
         </motion.div>
 
         {/* Content Section */}
-        <div className="relative z-10 w-full px-6 py-16 sm:px-12 md:pt-20 md:pb-16 lg:px-16 text-center flex flex-col items-center justify-center mx-auto">
+        <div className="relative z-10 w-full px-5 py-12 sm:px-12 sm:py-16 md:pt-20 md:pb-16 lg:px-16 text-center flex flex-col items-center justify-center mx-auto">
           {/* Headline */}
-          <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-base text-[#fffef7] leading-tight tracking-tight max-w-4xl text-center">
+          <h1 className="font-serif text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-base text-[#fffef7] leading-tight tracking-tight max-w-4xl text-center">
             Where Physiotherapy Precision <br className="hidden sm:inline" />
             Meets{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-gold-end via-white to-gold-start decoration-gold-start/40">
@@ -60,7 +60,7 @@ export default function Hero({
           </h1>
 
           {/* Sub-headline */}
-          <p className="mt-5 text-base sm:text-lg md:text-xl text-[#fffef7]/90 leading-relaxed font-sans font-light max-w-3xl text-center">
+          <p className="mt-4 text-sm sm:text-lg md:text-xl text-[#fffef7]/90 leading-relaxed font-sans font-light max-w-3xl text-center">
             At Svaparna Health the cause of your pain is not just managed - it
             is investigated, understood and addressed at its root through the
             combined power of evidence-based Physiotherapy and Ayurvedic
@@ -68,11 +68,11 @@ export default function Hero({
           </p>
 
           {/* Action CTAs Buttons */}
-          <div className="mt-8 flex items-center justify-center w-full">
+          <div className="mt-7 flex items-center justify-center w-full">
             <button
               id="hero-cta-start"
               onClick={onStartJourneyClick}
-              className="group relative flex items-center justify-center gap-2 overflow-hidden bg-gradient-to-r from-gold-start to-gold-end text-primary-brand font-bold text-[15.5px] px-10 py-4.5 rounded-full shadow-lg hover:shadow-xl hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 pointer-events-auto cursor-pointer"
+              className="group relative flex items-center justify-center gap-2 overflow-hidden bg-gradient-to-r from-gold-start to-gold-end text-primary-brand font-bold text-sm sm:text-[15.5px] px-7 sm:px-10 py-3.5 sm:py-4.5 rounded-full shadow-lg hover:shadow-xl hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 pointer-events-auto cursor-pointer"
             >
               <span className="relative z-10 flex items-center gap-2">
                 Start Your Healing Journey
@@ -107,7 +107,7 @@ export default function Hero({
               <div className="flex items-center space-x-1.5 px-4 py-1.5 md:py-2 bg-white backdrop-blur-md rounded-full shadow-xs border border-primary-brand/5 max-w-xs sm:max-w-md md:-translate-y-2 lg:-translate-y-4">
                 <Plus className="w-3.5 h-3.5 text-primary-brand animate-pulse" />
                 <span className="text-[9px] sm:text-[10px] md:text-xs font-mono font-bold tracking-wider text-primary-brand uppercase">
-                  SAME-DAY APPOINTMENT ARE AVAILABLE
+                  Same-Day Appointments Available
                 </span>
               </div>
 

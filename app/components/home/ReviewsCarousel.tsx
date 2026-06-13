@@ -15,6 +15,7 @@ type VideoTestimonial = {
   leftVideo: string;
   thumbnail: string;
   platform: string;
+  objectPosition?: string;
 };
 
 type WrittenTestimonial = {
@@ -33,31 +34,10 @@ type Testimonial = VideoTestimonial | WrittenTestimonial;
 // ─── Data - no id field, array index is the single source of truth ───────────
 
 const testimonials: Testimonial[] = [
+  // 1. Suri
   {
     type: "video",
-    text: "Hi, I'm Smriti, and I consulted Dr. Aparna of Swaparna Health for a back injury of mine. This happened a couple of months ago, and I was in severe pain. So Dr. Aparna actually tapped me on the back so that I could do my daily activities and so that my work week was not affected. And over the course of the last one and a half months, I have become independent and I'm able to do all the activities again with minimal problems and pain. So I have seen the progress in my posture and in the way I am doing day-to-day activities. And there is a lot of change which I am noticing in terms of how I feel and how I'm getting things done. So I highly recommend Dr. Aparna for all your needs of physical therapy. Thank you.",
-    author: "Ms. Smriti",
-    location: "Entrepreneur and small business owner, India",
-    shortQuote:
-      "I've become independent and able to do all activities again with minimal pain.",
-    leftVideo: "assets/testimonial-videos/MsSmritiTestimonial.mov",
-    thumbnail: "assets/testimonial-videos/testimonial-img2.png",
-    platform: "Google Reviews",
-  },
-  {
-    type: "video",
-    text: "Hi, this is Mala. I had an umbilical hernia surgery in January. After my umbilical hernia surgery, Dr. Aparna's unique combination of physiotherapy and Ayurveda helped me recover far beyond my expectations. Her exercises improved my mobility immediately, while Ayurvedic treatments eased bloating, supported scar healing, and strengthened my core. Within six weeks, I was back to yoga and all my normal activities.",
-    author: "Mrs. Mala",
-    location: "Retired Banker, India",
-    shortQuote:
-      "Within six weeks, I was back to yoga and all my normal activities.",
-    leftVideo: "assets/testimonial-videos/MrsMalaTestimonialTake2.mov",
-    thumbnail: "assets/testimonial-videos/testimonial-img1.png",
-    platform: "Google Reviews",
-  },
-  {
-    type: "video",
-    text: "Hello, This is Dr. Suri. I'm an acupuncturist from California I've had the opportunity to work with Dr. Aparna, and I really come to appreciate both her knowledge and the care she puts into her work. One thing that stands out to me is that how much she truly listens. She takes time to understand each person's concerns and creates an approach that feels personalized and thoughtful rather than one-size-fits-all. I would highly recommend experiencing the integrative approach that Dr. Aparna and Svaparna Health bring to supporting health.",
+    text: "Hello, this is Dr. Suri, an acupuncturist from California. I've had the opportunity to work with Dr. Aparna, and I truly appreciate both her knowledge and the care she puts into her work. What stands out to me is how much she truly listens. She takes time to understand each person's concerns and creates an approach that feels personalized and thoughtful rather than one-size-fits-all. I would highly recommend experiencing the integrative approach that Dr. Aparna and Svaparna Health bring to supporting health.",
     author: "Dr. Suri",
     location: "Acupuncturist, California",
     shortQuote:
@@ -65,10 +45,25 @@ const testimonials: Testimonial[] = [
     leftVideo: "assets/testimonial-videos/DrSuriTestimonial.mp4",
     thumbnail: "assets/testimonial-videos/testimonial-img3.png",
     platform: "Google Reviews",
+    objectPosition: "center 20%",
   },
+  // 2. Mala
   {
     type: "video",
-    text: "I have been working with Dr Aparna from Swaparna Health over the past 10 months to help address my chronic PCOS, which I've been diagnosed with for almost 10 years now. Dr Aparna has been great with providing insights about my body and helping me understand my prakriti and how that affects my PCOS. She has also provided me with personalized Ayurvedic recommendations for the Ayurvedic formulations, diet, lifestyle changes, and yoga that have really helped manage my PCOS symptoms. I've experienced improvement in my mood, energy levels, and I'm also experiencing improvement in the regularity of my menstrual cycles, which has been really helpful. I'm very grateful to Swaparna Health, and I highly recommend them to everyone. Thank you.",
+    text: "Hi, this is Mala. I had umbilical hernia surgery in January. Dr. Aparna's unique combination of physiotherapy and Ayurvedic care helped me recover far beyond my expectations. Her exercises improved my mobility immediately, while Ayurvedic treatments eased bloating, supported scar healing, and strengthened my core. Within six weeks, I was back to yoga and all my normal activities.",
+    author: "Mrs. Mala",
+    location: "Retired Banker, India",
+    shortQuote:
+      "Within six weeks, I was back to yoga and all my normal activities.",
+    leftVideo: "assets/testimonial-videos/MrsMalaTestimonialTake2.mov",
+    thumbnail: "assets/testimonial-videos/testimonial-img1.png",
+    platform: "Google Reviews",
+    objectPosition: "center 60%",
+  },
+  // 3. Ranjani
+  {
+    type: "video",
+    text: "I have been working with Dr. Aparna from Svaparna Health over the past 10 months to help address my chronic PCOS, which I've been diagnosed with for almost 10 years. Dr. Aparna has been excellent at providing insights about my body and helping me understand my prakriti and how it affects my PCOS. She provided me with personalized Ayurvedic formulations, diet recommendations, lifestyle changes, and yoga practices that have really helped manage my PCOS symptoms. I've experienced improvement in my mood, energy levels, and the regularity of my menstrual cycles. I'm very grateful to Svaparna Health and highly recommend them to everyone. Thank you.",
     author: "Ms. Ranjani",
     location: "Occupational Therapist, California",
     shortQuote:
@@ -76,7 +71,9 @@ const testimonials: Testimonial[] = [
     leftVideo: "assets/testimonial-videos/MsRanjaniTestimonial.mp4",
     thumbnail: "assets/testimonial-videos/ranjaniTestimonial.png",
     platform: "Google Reviews",
+    objectPosition: "center 25%",
   },
+  // 4. Jenny (Dr. Jessy)
   {
     type: "written",
     text: "I have had the privilege of receiving guidance from Dr. Aparna on several health concerns, particularly related to gut health and foot-related issues. In today's fast-paced world where sedentary lifestyles, chronic stress, irregular routines, and poor lifestyle habits increasingly contribute to a wide range of health concerns, Dr. Aparna's approach offers a refreshing and much-needed perspective. I have consistently been impressed by her depth of knowledge, thoughtful approach, and ability to provide practical solutions grounded in both Physiotherapy and Ayurveda. What sets her apart is her interdisciplinary expertise. She skillfully integrates evidence-based Physiotherapy principles with traditional Indian Knowledge Systems, offering holistic recommendations that address the root causes of health concerns rather than merely alleviating symptoms. Her guidance on lifestyle modifications, Ayurvedic practices, and simple home remedies has always been insightful, personalized, and easy to incorporate into daily life. I would highly recommend her to anyone seeking comprehensive, patient-centered care that considers the body, mind, and lifestyle as interconnected aspects of health. Her passion for helping people achieve better health is evident in every interaction, and I have greatly benefited from her guidance and expertise.",
@@ -88,6 +85,20 @@ const testimonials: Testimonial[] = [
     thumbnail: "assets/testimonial-videos/DrJessyPicture.jpg",
     platform: "Google Reviews",
   },
+  // 5. Smriti
+  {
+    type: "video",
+    text: "Hi, I'm Smriti, and I consulted Dr. Aparna of Svaparna Health for a back injury of mine. This happened a couple of months ago, and I was in severe pain. Dr. Aparna's treatment plan helped me regain the ability to do my daily activities without affecting my work week. Over the course of the last one and a half months, I have become independent and able to do all activities again with minimal pain. I've seen significant progress in my posture and day-to-day functioning. There is a lot of positive change in how I feel and how I'm getting things done. I highly recommend Dr. Aparna for all your physical therapy needs. Thank you.",
+    author: "Ms. Smriti",
+    location: "Entrepreneur and small business owner, India",
+    shortQuote:
+      "I've become independent and able to do all activities again with minimal pain.",
+    leftVideo: "assets/testimonial-videos/MsSmritiTestimonial.mov",
+    thumbnail: "assets/testimonial-videos/testimonial-img2.png",
+    platform: "Google Reviews",
+    objectPosition: "center 20%",
+  },
+  // 6. Vivek
   {
     type: "written",
     text: "I did an online Ayurvedic Consultation with Dr. Aparna of Svaparna Health to seek solutions for sleep issues/digestive health/stress management. Her expertise in Ayurveda helped me identify the root causes of my imbalances rather than just treating the symptoms. The guidance was structured, easy to follow, and highly customized to my daily life. I've seen tangible results in all areas, waking up daily with more energy for daily activities. I highly recommend her to anyone looking to restore their health naturally.",
@@ -179,8 +190,8 @@ function VideoPanel({
       <video
         ref={videoRef}
         src={t.leftVideo}
-        className="w-full h-full object-cover object-center"
-        style={{ minHeight: "320px", maxHeight: "540px", display: "block" }}
+        className="w-full h-full object-cover"
+        style={{ minHeight: "320px", maxHeight: "540px", display: "block", objectPosition: t.objectPosition ?? "center 30%" }}
         playsInline
         preload="metadata"
       />
@@ -340,11 +351,11 @@ export default function ReviewsCarousel() {
         >
           <div className="inline-flex items-center space-x-2 bg-primary-brand/5 border border-primary-brand/10 px-4.5 py-1.5 rounded-full">
             <span className="text-xs font-base uppercase tracking-widest text-[#631a47]">
-              General Care
+              Patient Testimonials
             </span>
           </div>
           <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-normal text-primary-brand tracking-tight">
-            Recovery, in Their Own Words. <br /> &amp; Post-Operative Care
+            Real Results, Real Stories <br /> Hear From Our Patients
           </h2>
         </motion.div>
 
@@ -363,7 +374,7 @@ export default function ReviewsCarousel() {
               animate="center"
               exit="exit"
               transition={{ duration: 0.45, ease: [0.4, 0, 0.2, 1] }}
-              className="grid grid-cols-1 lg:grid-cols-5 gap-0 rounded-[2rem] overflow-hidden shadow-[0_32px_80px_rgba(99,26,71,0.08)]"
+              className="grid grid-cols-1 lg:grid-cols-5 gap-0 rounded-[2rem] overflow-hidden shadow-[0_32px_80px_rgba(99,26,71,0.08)] lg:h-[520px]"
             >
               {current.type === "video" ? (
                 <VideoPanel
@@ -376,11 +387,12 @@ export default function ReviewsCarousel() {
                 <ImagePanel t={current} />
               )}
 
-              <div className="lg:col-span-2 flex flex-col justify-between p-7 sm:p-8 lg:p-10 bg-[#fffef7]">
-                <div>
+              <div className="lg:col-span-2 flex flex-col h-full overflow-hidden bg-[#fffef7]">
+                {/* Scrollable text region */}
+                <div className="flex-1 min-h-0 overflow-y-auto px-7 pt-5 sm:px-8 lg:px-10 pb-4">
                   <span
                     aria-hidden
-                    className="block text-6xl leading-none select-none mb-3 -ml-1"
+                    className="block text-5xl leading-none select-none mb-2 -ml-1"
                     style={{
                       fontFamily: "'Cormorant Garamond', Georgia, serif",
                       color: "#9b6b3a",
@@ -400,16 +412,16 @@ export default function ReviewsCarousel() {
                   <div
                     className="h-px w-10 mb-6"
                     style={{
-                      background:
-                        "linear-gradient(90deg, #9b6b3a, transparent)",
+                      background: "linear-gradient(90deg, #9b6b3a, transparent)",
                     }}
                   />
-                  <p className="text-black text-sm leading-relaxed font-light line-clamp-[9]">
+                  <p className="text-black text-sm leading-relaxed font-light">
                     {current.text}
                   </p>
                 </div>
 
-                <div className="mt-8 flex items-center justify-between">
+                {/* Always-visible nav — never scrolls away */}
+                <div className="shrink-0 px-7 sm:px-8 lg:px-10 py-5 border-t border-primary-brand/8 flex items-center justify-between bg-[#fffef7]">
                   <div className="flex items-baseline gap-1">
                     <span
                       className="text-2xl font-normal text-[#631a47]"
@@ -446,7 +458,7 @@ export default function ReviewsCarousel() {
         </motion.div>
 
         <motion.div
-          className="mt-6 sm:mt-8 flex items-stretch gap-3 justify-center"
+          className="mt-6 sm:mt-8 flex items-stretch gap-2 sm:gap-3 justify-center flex-wrap"
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -461,7 +473,7 @@ export default function ReviewsCarousel() {
                   ? "ring-2 ring-[#631a47] ring-offset-2 ring-offset-[#fffef7]"
                   : "opacity-40 hover:opacity-70"
               }`}
-              style={{ width: 68, height: 52, flexShrink: 0 }}
+              style={{ width: 60, height: 72, flexShrink: 0 }}
               aria-label={`Go to ${t.author}'s testimonial`}
             >
               <img
@@ -488,7 +500,7 @@ export default function ReviewsCarousel() {
           {testimonials.map((t, i) => (
             <div
               key={i}
-              style={{ width: 68, flexShrink: 0 }}
+              style={{ width: 60, flexShrink: 0 }}
               className={`text-center transition-all duration-300 ${
                 i === currentIndex ? "opacity-100" : "opacity-30"
               }`}
