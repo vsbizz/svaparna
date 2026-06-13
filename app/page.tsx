@@ -14,6 +14,7 @@ import FAQ from "./components/home/FAQ";
 import Consultations from "./components/home/Consultations";
 import Difference from "./components/home/Difference";
 import TreatmentPackages from "./components/home/TreatmentPackages";
+import PricingSection from "./components/home/PricingSection";
 import CTABand from "./components/home/CTABand";
 import Services from "./components/home/Services";
 import { Calendar } from "lucide-react";
@@ -39,17 +40,18 @@ export default function Home() {
       <CoveredHeadToToe onBookConsultation={() => {}} />
       <Contact /> */}
       <About />
-      <Consultations onSelectType={() => {}} />
+      <Consultations onSelectType={() => { }} />
       <Services />
-      <ConditionsTreated onBookConsultation={() => {}} />
+      <ConditionsTreated onBookConsultation={() => { }} />
       <OurProcess />
-      <Difference onBookClick={() => {}} />
+      <Difference onBookClick={() => { }} />
       <TreatmentPackages openCalendly={openCalendly} />
+      <PricingSection openCalendly={openCalendly} />
       <ReviewsCarousel />
       <FAQ />
       <CTABand
         title="Let's Get You Back to Better"
-        description="We take pride in delivering highly personalized physical therapy."
+        description="We take pride in delivering highly personalized care."
         image="assets/images/cta-img.png"
         buttons={[
           {

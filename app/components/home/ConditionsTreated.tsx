@@ -15,40 +15,40 @@ const nicheItems = [
     title: "Vertigo (BPPV: Benign Paroxysmal Positional Vertigo)",
     subInfo:
       "Specialized assessment and maneuvers for vertigo and associated dizziness.",
-    image: "assets/images/bppv.png", // e.g. "assets/images/vertigo.webp"
+    image: "/assets/images/bppv.png",
   },
   {
     id: "02",
     title: "Urinary Incontinence in Women",
     subInfo:
       "Targeted pelvic floor rehabilitation to restore control and confidence.",
-    image: "assets/images/urinary-incontinence.jpg", // e.g. "assets/images/pelvic-floor.webp"
+    image: "/assets/images/urinary-incontinence.jpg",
   },
   {
     id: "03",
     title: "Pregnancy-related low back pain",
     subInfo:
       "Safe, evidence-based physical therapy to manage and relieve back pain during pregnancy.",
-    image: "assets/images/pregnancy-back-pain.jpeg", // e.g. "assets/images/pregnancy-care.webp"
+    image: "/assets/images/pregnancy-back-pain.jpeg",
   },
   {
     id: "04",
     title: "Diastasis Recti recovery postpartum",
     subInfo:
       "Guided core rehabilitation to safely close abdominal separation after childbirth.",
-    image: "assets/images/diastatis-recti.jpg", // e.g. "assets/images/postpartum.webp"
+    image: "/assets/images/diastasis-recti.jpg",
   },
   {
     id: "05",
     title: "Constipation in children",
     subInfo: "Gentle, non-invasive pediatric bowel management techniques.",
-    image: "assets/images/constipation-in-children.webp", // e.g. "assets/images/pediatric.webp"
+    image: "/assets/images/constipation-in-children.webp",
   },
   {
     id: "06",
     title: "Bed wetting in children",
     subInfo: "Pediatric bladder control strategies and pelvic floor education.",
-    image: "assets/images/bed-wetting-children.jpeg", // e.g. "assets/images/bedwetting.webp"
+    image: "/assets/images/bed-wetting-children.jpeg",
   },
 ];
 
@@ -103,7 +103,7 @@ const orthoCards = [
 ];
 
 // Fallback shown when no per-item image is hovered yet
-const DEFAULT_IMAGE = "assets/images/Manual-Therapy.webp";
+const DEFAULT_IMAGE = "/assets/images/Manual-Therapy.webp";
 
 export default function ConditionsTreatedCombined({
   onBookConsultation,
@@ -134,7 +134,7 @@ export default function ConditionsTreatedCombined({
               </span>
             </div>
             <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-normal text-primary-brand tracking-tight">
-              What We Treat.
+              What We Treat
             </h2>
           </div>
           <p className="text-md text-neutral-500 leading-relaxed max-w-md shrink-0">
@@ -151,7 +151,7 @@ export default function ConditionsTreatedCombined({
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            className="relative h-80 sm:h-[440px] lg:h-full overflow-hidden bg-[#1a0d14]
+            className="relative h-60 sm:h-[360px] lg:h-full overflow-hidden bg-[#1a0d14]
                        border-b lg:border-b-0 lg:border-r border-primary-brand/8"
           >
             {/*
@@ -218,10 +218,6 @@ export default function ConditionsTreatedCombined({
                   exit={{ opacity: 0, y: -6 }}
                   transition={{ duration: 0.25 }}
                 >
-                  <p className="text-[9px] uppercase tracking-[0.2em] font-mono font-bold text-white/35 mb-1.5">
-                    {activeNiche.id} /{" "}
-                    {String(nicheItems.length).padStart(2, "0")}
-                  </p>
                   <p
                     className="text-white text-base sm:text-lg font-normal leading-snug max-w-xs"
                     style={{
@@ -252,18 +248,6 @@ export default function ConditionsTreatedCombined({
                     className="group py-4 cursor-pointer"
                   >
                     <div className="flex items-center gap-5">
-                      {/* Number */}
-                      <span
-                        className="shrink-0 font-light leading-none select-none transition-all duration-300 w-10 text-right"
-                        style={{
-                          fontFamily: "'Cormorant Garamond', Georgia, serif",
-                          fontSize: "1.85rem",
-                          color: isActive ? "#631a47" : "rgba(99,26,71,0.10)",
-                        }}
-                      >
-                        {item.id}
-                      </span>
-
                       {/* Gradient hairline */}
                       <div
                         className="self-stretch shrink-0 transition-all duration-300 rounded-full"

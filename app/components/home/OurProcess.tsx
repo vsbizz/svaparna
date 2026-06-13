@@ -36,7 +36,7 @@ export default function OurProcess() {
       title: "Book Your Consultation",
       subtitle: "Online Scheduling",
       description:
-        " Online Physiotherapy (India), Online Ayurvedic Consultations from anywhere - USA, India, e.t.c, or In-Person Consultations in Mumbai (Coming Soon).",
+        "Choose your care pathway: Online Physiotherapy (India), Online Ayurvedic Consultations (USA, India), or In-Person in Mumbai (Coming Soon).",
       colorHex: "#52133a", // deep plum
       badgeBg: "bg-[#52133a]",
       iconBg: "bg-[#52133a]/10 hover:bg-[#52133a]",
@@ -50,7 +50,7 @@ export default function OurProcess() {
       title: "Initial Assessment",
       subtitle: "1 Hour Comprehensive",
       description:
-        "A comprehensive 1-on-1 evaluation with Dr. Aparna to understand assess any imbalance and analyse goals.",
+        "A comprehensive 1-on-1 evaluation with Dr. Aparna to understand your medical history assess any imbalances and analyse your goals.",
       colorHex: "#844372", // orchid plum
       badgeBg: "bg-[#844372]",
       iconBg: "bg-[#844372]/10 hover:bg-[#844372]",
@@ -64,7 +64,7 @@ export default function OurProcess() {
       title: "Personalized Care Plan",
       subtitle: "Evidence-Based Design",
       description:
-        "A tailored treatment care with clear rationales for every physical exercise and Ayurvedic recommendation.",
+        "A tailored treatment plan with clear rationales for every physical exercise and Ayurvedic recommendation.",
       colorHex: "#d4af37", // bright gold
       badgeBg: "bg-[#d4af37]",
       iconBg: "bg-[#d4af37]/10 hover:bg-[#d4af37]",
@@ -78,7 +78,7 @@ export default function OurProcess() {
       title: "Ongoing Care",
       subtitle: "45 Mins Dedicated",
       description:
-        "Consistent follow-up sessions with Dr. Aparna's experties every single time.",
+        "Consistent follow-up sessions ensuring Dr. Aparna's expertise every single time.",
       colorHex: "#c38e1a", // warm amber
       badgeBg: "bg-[#c38e1a]",
       iconBg: "bg-[#c38e1a]/10 hover:bg-[#c38e1a]",
@@ -137,7 +137,7 @@ export default function OurProcess() {
 
           <div className="hidden lg:block absolute top-[108px] left-[12%] right-[11%] h-[2px] border-t-2 border-dashed border-primary-brand/15 -z-10" />
           {/* 4-Column Responsive Layout */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8 items-start">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10 lg:gap-8 items-start">
             {steps.map((step, index) => {
               const isHovered = hoveredStep === index;
 
@@ -158,21 +158,19 @@ export default function OurProcess() {
                   </span>
 
                   {/* HIGH-FIDELITY CIRCLE SCHEMA (Exactly matching the style layout uploaded in the prompt) */}
-                  <div className="relative flex items-center justify-center w-36 h-36">
+                  <div className="relative flex items-center justify-center w-28 h-28 sm:w-36 sm:h-36">
                     {/* Rotating Dashed Outer Circle Indicator */}
                     <div
-                      className={`absolute inset-0 rounded-full border-2 border-dashed transition-all duration-700 ${step.borderDashed} ${
-                        isHovered
-                          ? "rotate-45 scale-[1.08]"
-                          : "rotate-0 scale-100"
-                      }`}
+                      className={`absolute inset-0 rounded-full border-2 border-dashed transition-all duration-700 ${step.borderDashed} ${isHovered
+                        ? "rotate-45 scale-[1.08]"
+                        : "rotate-0 scale-100"
+                        }`}
                     />
 
                     {/* Inner Solid Colored Interactive Circle - Be coloured by default with step colors */}
                     <motion.div
-                      className={`w-28 h-28 rounded-full flex items-center justify-center shadow-lg transition-all duration-300 ${
-                        isHovered ? "scale-105" : "scale-100"
-                      }`}
+                      className={`w-28 h-28 rounded-full flex items-center justify-center shadow-lg transition-all duration-300 ${isHovered ? "scale-105" : "scale-100"
+                        }`}
                       style={{
                         backgroundColor: step.colorHex,
                         border: `1.5px solid ${step.colorHex}25`,
@@ -190,9 +188,8 @@ export default function OurProcess() {
 
                   {/* Badged Step tag under circular indicators (Exactly replicates rectangular color block "DISCOVER" from mock image) */}
                   <div
-                    className={`text-sm font-bold tracking-[0.25em] text-white px-5.5 py-1.5 uppercase select-none shadow-xs mt-6 transition-all duration-300 rounded-[3px] ${step.badgeBg} ${
-                      isHovered ? "scale-105 shadow-md" : "opacity-90"
-                    }`}
+                    className={`text-sm font-bold tracking-[0.25em] text-white px-5.5 py-1.5 uppercase select-none shadow-xs mt-6 transition-all duration-300 rounded-[3px] ${step.badgeBg} ${isHovered ? "scale-105 shadow-md" : "opacity-90"
+                      }`}
                   >
                     {step.badgeText}
                   </div>

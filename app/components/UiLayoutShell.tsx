@@ -29,14 +29,11 @@ export default function UiLayoutShell({
   };
 
   const navItems: NavItem[] = [
-    { label: "Home", href: "/#home" },
+    { label: "Home", href: "/" },
     { label: "About", href: "/about" },
-    { label: "Our Process", href: "/#process" },
-    { label: "Conditions", href: "/#conditions" },
-
     { label: "Services", href: "/services" },
-    { label: "Consultations", href: "/#consultations" },
     { label: "FAQs", href: "/faq" },
+    { label: "Contact", href: "/contact" },
   ];
 
   const handleOpenBooking = (

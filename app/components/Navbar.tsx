@@ -54,10 +54,10 @@ export default function Navbar({ navItems, openCalendly }: NavbarProps) {
           {/* Logo Brand Brand Section */}
           <Link id="nav-logo" href="/" className="flex items-center space-x-2">
             <img
-              src="assets/images/logo-white.png"
+              src="/assets/images/logo-white.png"
               alt="Logo"
               className={`w-auto group-hover:scale-105 transition-all duration-300 ${
-                isSticky ? "h-20" : "h-10 sm:h-12 md:h-14 lg:h-16 xl:h-24"
+                isSticky ? "h-10 sm:h-12" : "h-10 sm:h-12 md:h-14 lg:h-16"
               }`}
             />
           </Link>

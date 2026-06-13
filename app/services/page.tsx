@@ -321,7 +321,7 @@ export default function ServicesPage() {
               <div className="flex items-start gap-3 border-t border-primary-brand/10 pt-4">
                 <Leaf className="mt-1 h-5 w-5 shrink-0 text-[#4b8078]" />
                 <div>
-                  <div className="font-medium text-primary-brand">Ayurveda</div>
+                  <div className="font-medium text-primary-brand">Ayurvedic Care</div>
                   <div className="mt-1 text-sm leading-6 text-neutral-700">
                     Holistic wisdom for balance.
                   </div>
@@ -477,7 +477,7 @@ export default function ServicesPage() {
 
       <CTABand
         title="Ready to Start Your Recovery?"
-        description="Book an online Physiotherapy consultation in India, or an online Ayurveda consultation from anywhere in the world. In person appointments are coming soon!"
+        description="Book an online Physiotherapy consultation in India, or an online Ayurvedic consultation from anywhere in the world. In person appointments are coming soon!"
         image="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&q=80&w=2100"
         buttons={[
           {
