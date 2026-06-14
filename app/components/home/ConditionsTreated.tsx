@@ -36,7 +36,7 @@ const nicheItems = [
     title: "Diastasis Recti recovery postpartum",
     subInfo:
       "Guided core rehabilitation to safely close abdominal separation after childbirth.",
-    image: "/assets/images/diastasis-recti.jpg",
+    image: "/assets/images/recti.jpg",
   },
   {
     id: "05",
@@ -181,7 +181,7 @@ export default function ConditionsTreatedCombined({
                   <img
                     src={src}
                     alt={item.title}
-                    className={`w-full h-full ${item.id === "01" ? "object-contain" : "object-cover"}  object-[center_25%] block`}
+                    className={`w-full h-full object-cover object-[center_25%] block`}
                   />
                 </motion.div>
               );
