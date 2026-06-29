@@ -12,43 +12,43 @@ interface ConditionsTreatedProps {
 const nicheItems = [
   {
     id: "01",
-    title: "Vertigo (BPPV: Benign Paroxysmal Positional Vertigo)",
-    subInfo:
-      "Specialized assessment and maneuvers for vertigo and associated dizziness.",
-    image: "/assets/images/bppv.png",
-  },
-  {
-    id: "02",
     title: "Urinary Incontinence in Women",
     subInfo:
       "Targeted pelvic floor rehabilitation to restore control and confidence.",
     image: "/assets/images/urinary-incontinence.jpg",
   },
   {
-    id: "03",
+    id: "02",
     title: "Pregnancy-related low back pain",
     subInfo:
       "Safe, evidence-based physical therapy to manage and relieve back pain during pregnancy.",
     image: "/assets/images/pregnancy-back-pain.jpeg",
   },
   {
-    id: "04",
+    id: "03",
     title: "Diastasis Recti recovery postpartum",
     subInfo:
       "Guided core rehabilitation to safely close abdominal separation after childbirth.",
     image: "/assets/images/recti.jpg",
   },
   {
-    id: "05",
+    id: "04",
     title: "Constipation in children",
     subInfo: "Gentle, non-invasive pediatric bowel management techniques.",
     image: "/assets/images/constipation-in-children.webp",
   },
   {
-    id: "06",
+    id: "05",
     title: "Bed wetting in children",
     subInfo: "Pediatric bladder control strategies and pelvic floor education.",
     image: "/assets/images/bed-wetting-children.jpeg",
+  },
+  {
+    id: "06",
+    title: "Vertigo (BPPV: Benign Paroxysmal Positional Vertigo)",
+    subInfo:
+      "Specialized assessment and maneuvers for vertigo and associated dizziness.",
+    image: "/assets/images/bppv.png",
   },
 ];
 

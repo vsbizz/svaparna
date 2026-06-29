@@ -22,6 +22,7 @@ export default function FounderProfile() {
     "CAPP-OB Certification in Pregnancy & Post-Partum Care",
     "Vestibular Rehabilitation Certification (Cert VRS)",
     "Herman & Wallace Certification in Pediatric Bowel and Bladder",
+    "Level 1 Ayurvedic Health Counselor (Kerala Ayurveda Academy USA)",
     "Level 2 Ayurvedic Practitioner (Kerala Ayurveda Academy USA)",
     "Ayurvedic Pulse Diagnosis Certification",
   ];
@@ -39,12 +40,12 @@ export default function FounderProfile() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-center">
           {/* Left Side: Modern Asymmetrical Creative Image Frame */}
           <div className="lg:col-span-5 relative flex justify-center">
-            <div className="relative w-full max-w-md aspect-[4/5] rounded-[3rem] overflow-hidden shadow-2xl border border-primary-brand/10 bg-primary-brand/[0.02] group">
+            <div className="relative w-full max-w-md aspect-[4/5] rounded-[3rem] overflow-hidden shadow-2xl border border-primary-brand/10 bg-white group">
               {/* Refined representative avatar/portrait of a warm, professional clinical expert */}
               <img
                 src="/assets/images/DrAparna.png"
                 alt="Dr. Aparna Sekhar, DPT"
-                className="w-full h-full object-cover object-center group-hover:scale-102 transition-transform duration-500"
+                className="w-full h-full object-cover object-center group-hover:scale-102 transition-transform duration-500 mt-5"
                 referrerPolicy="no-referrer"
               />
 
@@ -85,11 +86,11 @@ export default function FounderProfile() {
             {/* Headline */}
             <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-normal text-primary-brand tracking-tight leading-tight">
               Meet Dr. Aparna Sekhar{" "}
-              <span className="font-serif text-lg sm:text-xl font-light text-primary-brand/70 align-middle">
+              <span className="font-serif text-lg sm:text-xl font-light text-primary-brand align-middle">
                 (PT, DPT, Cert VRS)
               </span>
             </h2>
-            <p className="font-serif text-lg sm:text-xl font-light tracking-wide text-transparent bg-clip-text bg-gradient-to-r from-gold-start to-gold-end">
+            <p className="font-serif text-lg sm:text-xl font-bold tracking-wide text-transparent bg-clip-text bg-gradient-to-r from-gold-start to-gold-end">
               Senior Physiotherapist · Ayurvedic Practitioner · Integrative Health Specialist
             </p>
 

@@ -353,11 +353,11 @@ export default function Footer({ onBookClick }: FooterProps) {
 
             {/* Middle legal anchors */}
             <div className="order-2 flex items-center justify-center space-x-4 select-none">
-              <a href="#" className="hover:text-white transition-colors">
-                Terms of Service
+              <a href="/terms-and-conditions" className="hover:text-white transition-colors">
+                Terms and Conditions
               </a>
               <span className="text-gold-start/40 select-none">•</span>
-              <a href="#" className="hover:text-white transition-colors">
+              <a href="/privacy-policy" className="hover:text-white transition-colors">
                 Privacy Policy
               </a>
             </div>

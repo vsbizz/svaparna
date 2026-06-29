@@ -50,11 +50,11 @@ export default function AboutPage() {
           >
             <h1 className="font-serif text-3xl sm:text-5xl lg:text-7xl font-normal text-primary-brand tracking-tight leading-tight">
               Dr. Aparna Sekhar{" "}
-              <span className="font-serif text-lg sm:text-2xl lg:text-3xl font-light text-primary-brand/70 align-middle">
+              <span className="font-serif text-lg sm:text-2xl lg:text-3xl font-light text-primary-brand align-middle">
                 (PT, DPT, Cert VRS)
               </span>
             </h1>
-            <p className="font-serif text-xl sm:text-2xl font-light tracking-wide text-transparent bg-clip-text bg-gradient-to-r from-gold-start to-gold-end">
+            <p className="font-serif text-xl sm:text-2xl font-bold tracking-wide text-transparent bg-clip-text bg-gradient-to-r from-gold-start to-gold-end">
               Senior Physiotherapist · Ayurvedic Practitioner · Integrative Health Specialist
             </p>
           </motion.div>
@@ -165,7 +165,7 @@ export default function AboutPage() {
                 Advanced Training Across Modern Rehabilitation &amp; Ayurvedic Practice
               </h2>
               <p className="mt-6 text-base leading-8 text-neutral-700">
-                Combining international physiotherapy expertise with specialized
+                Combining International Physiotherapy expertise with specialized
                 Ayurvedic training to provide a truly integrative approach to
                 health, recovery, and long-term well-being.
               </p>
@@ -198,11 +198,9 @@ export default function AboutPage() {
                   <div className="flex-1 divide-y divide-primary-brand/6">
                     {[
                       "Post-Graduate Doctor of Physical Therapy, University of Illinois at Chicago (LEND Fellow)",
-                      "BSc Molecular and Cellular Biology, University of Illinois at Urbana Champaign",
                       "Vestibular Rehabilitation Certification (Cert VRS)",
                       "CAPP-OB Certification in Pregnancy & Post-Partum Care (APTA Women's Health)",
                       "Herman & Wallace Certification in Pediatric Bowel and Bladder",
-                      "Guest Lecturer, St. Xavier's College Mumbai (History & General Principles of Ayurvedic Science)",
                     ].map((item, index) => (
                       <motion.div
                         key={item}
@@ -251,7 +249,7 @@ export default function AboutPage() {
                     </div>
                   </div>
 
-                  <div className="flex-1 divide-y divide-primary-brand/6 flex justify-center flex-col">
+                  <div className="flex-1 divide-y divide-primary-brand/6 flex justify-start flex-col">
                     {[
                       "Level 1 Ayurvedic Health Counselor Certification from Kerala Ayurveda Academy, USA",
                       "Level 2 Ayurvedic Practitioner (Kerala Ayurveda Academy, USA)",
@@ -274,24 +272,6 @@ export default function AboutPage() {
                   </div>
                 </motion.div>
               </div>
-            </div>
-
-            {/* Bottom strip */}
-            <div
-              className="border border-primary-brand/10 border-t-0 px-8 sm:px-10 py-7"
-              style={{ background: "#fffef7" }}
-            >
-              <div className="flex items-start gap-3 mb-4">
-                <span className="text-md font-semibold text-primary-brand">
-                  Evidence-Based Rehabilitation + Ayurvedic Wisdom
-                </span>
-              </div>
-              <p className="text-sm leading-7 text-neutral-600 max-w-3xl">
-                The integration of these disciplines allows for a personalized
-                treatment approach that addresses not only symptoms, but the
-                broader physical, functional, and lifestyle factors influencing
-                health.
-              </p>
             </div>
           </motion.div>
         </div>

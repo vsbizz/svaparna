@@ -50,7 +50,7 @@ export default function OurProcess() {
       title: "Initial Assessment",
       subtitle: "1 Hour Comprehensive",
       description:
-        "A comprehensive 1-on-1 evaluation with Dr. Aparna to understand your medical history assess any imbalances and analyse your goals.",
+        "A comprehensive 1-on-1 evaluation with Dr. Aparna to understand your medical history, assess any imbalances and analyse your goals.",
       colorHex: "#844372", // orchid plum
       badgeBg: "bg-[#844372]",
       iconBg: "bg-[#844372]/10 hover:bg-[#844372]",

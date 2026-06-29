@@ -28,7 +28,7 @@ export default function ConsultationSelectorSection({
       status: "active",
       badgeColor: "bg-indigo-50 text-indigo-900 border-indigo-100",
       title: "Online Consultations (India)",
-      description: "Virtual Physiotherapy and Ayurvedic Consultations delivered securely online across India.",
+      description: "Virtual Physiotherapy Consultations and Ayurvedic Consultations delivered securely online across India.",
       features: [
         "Virtual movement and in-depth analysis",
         "Guided home rehabilitation exercise plans",
@@ -69,11 +69,11 @@ export default function ConsultationSelectorSection({
       badgeColor: "bg-amber-100 text-amber-800 border-amber-200",
       title: "Offline Consultations (Mumbai)",
       description:
-        "Physiotherapy and Ayurvedic Consultations in person at our clinic.",
+        "Physiotherapy Consultations and Ayurvedic Consultations in person at our clinic.",
       features: [
         "Comprehensive 1-on-1 assessment",
         "Evidence-based in person care",
-        "Integrated Ayurvedic healing protocols",
+        "Integrated Ayurvedic counseling",
       ],
       icon: <Landmark className="w-5 h-5 text-gold-start" />,
       buttonText: "Offline Services Coming Soon",
