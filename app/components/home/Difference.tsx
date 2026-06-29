@@ -30,7 +30,7 @@ export default function Difference({ onBookClick }: DifferenceProps) {
       id: "val-3",
       icon: <HeartHandshake className="w-8 h-8 text-primary-brand" />,
       title: "Integrative Approach",
-      desc: "We don't just treat the symptom. By blending Physiotherapy and Ayurvedic Practices, we support your body's natural healing environment.",
+      desc: "We don't just treat the symptom. By blending Physiotherapy care with Ayurvedic Principles, we support your body's natural healing environment.",
     },
     {
       id: "val-4",

@@ -1,14 +1,12 @@
 "use client";
 
 import { motion } from "motion/react";
-import { Calendar, Check, Info } from "lucide-react";
+import { Calendar, Check } from "lucide-react";
 
+// Update the type signature to match our service enum values
 interface PricingSectionProps {
-  openCalendly: (url: string) => void;
+  openCalendly: (service: "physiotherapy" | "ayurvedaIndia" | "ayurvedaUSA") => void;
 }
-
-const physioUrl = "https://calendly.com/qusaivsbizz/new-meeting";
-const ayurvedaUrl = "https://calendly.com/qusaivsbizz/30min";
 
 export default function PricingSection({ openCalendly }: PricingSectionProps) {
   return (
@@ -24,18 +22,15 @@ export default function PricingSection({ openCalendly }: PricingSectionProps) {
         transition={{ duration: 0.6, ease: "easeOut" }}
       >
         {/* Header */}
-        <div className="text-center max-w-xl mx-auto mb-12 space-y-3">
+        <div className="text-center max-w-4xl mx-auto mb-12 space-y-3">
           <div className="inline-flex items-center bg-primary-brand/5 border border-primary-brand/10 px-4 py-1.5 rounded-full">
             <span className="text-sm font-mono uppercase tracking-widest text-[#631a47]">
-              Transparent Pricing
+              Pricing & Packages
             </span>
           </div>
           <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-normal text-primary-brand tracking-tight">
-            Simple, Honest Pricing
+            Transparent Pricing & Structured Packages
           </h2>
-          <p className="text-base text-neutral-500 leading-relaxed">
-            Every session is 1-on-1 with Dr. Aparna. No assistants, no hidden fees.
-          </p>
         </div>
 
         {/* ── 3-column pricing table ── */}
@@ -45,9 +40,9 @@ export default function PricingSection({ openCalendly }: PricingSectionProps) {
           <div className="bg-white p-5 sm:p-8 flex flex-col gap-6">
             <div>
               <span className="text-base font-mono font-extrabold uppercase tracking-[0.18em] text-gold-start">
-                Physiotherapy
+                Physiotherapy · India
               </span>
-              <p className="text-sm text-neutral-400 mt-1">India only · Online + Mumbai in-person (coming soon)</p>
+              <p className="text-sm text-neutral-400 mt-1">Online + Mumbai in-person (coming soon)</p>
             </div>
 
             <div className="space-y-1">
@@ -59,18 +54,18 @@ export default function PricingSection({ openCalendly }: PricingSectionProps) {
             <div className="bg-primary-brand/[0.03] border border-primary-brand/8 rounded-xl p-5 space-y-3">
               <div className="flex items-center gap-2 mb-1">
                 <span className="text-xs font-mono font-bold uppercase tracking-[0.2em] text-gold-start">Packages</span>
-                <span className="text-xs bg-amber-50 border border-amber-200 text-amber-700 font-semibold px-2 py-0.5 rounded-full">After 1st session</span>
+                <span className="text-xs bg-amber-50 border border-amber-200 text-amber-700 font-semibold px-2 py-0.5 rounded-full">Follow-up Session Packages</span>
               </div>
-              <PackageRow label="6 Sessions" price="₹7,200" per="₹1,200 / session" />
-              <PackageRow label="12 Sessions" price="₹12,000" per="₹1,000 / session" />
+              <PackageRow label="6 Follow-up Sessions" price="₹7,200" per="₹1,200 / session" />
+              <PackageRow label="12 Follow-up Sessions" price="₹12,000" per="₹1,000 / session" />
             </div>
 
             <button
-              onClick={() => openCalendly(physioUrl)}
-              className="mt-auto w-full inline-flex items-center justify-center gap-2 rounded-full py-3.5 text-sm font-semibold bg-gradient-to-r from-gold-start to-gold-end text-primary-brand hover:scale-[1.02] hover:shadow-md transition-all duration-300"
+              onClick={() => openCalendly("physiotherapy")}
+              className="mt-auto cursor-pointer w-full inline-flex items-center justify-center gap-2 rounded-full py-3.5 text-sm font-semibold bg-gradient-to-r from-gold-start to-gold-end text-primary-brand hover:scale-[1.02] hover:shadow-md transition-all duration-300 border-0"
             >
               <Calendar className="w-4 h-4" />
-              Book Physiotherapy
+              Book Now
             </button>
           </div>
 
@@ -91,7 +86,7 @@ export default function PricingSection({ openCalendly }: PricingSectionProps) {
             <ul className="space-y-2.5 flex-1">
               {[
                 "Prakriti (constitutional) analysis",
-                "Nadi Pariksha (pulse diagnosis)",
+                "Vikriti (imbalances) analysis",
                 "Personalised diet & lifestyle plan",
                 "Herbal & supplement guidance",
               ].map((f, i) => (
@@ -103,11 +98,11 @@ export default function PricingSection({ openCalendly }: PricingSectionProps) {
             </ul>
 
             <button
-              onClick={() => openCalendly(ayurvedaUrl)}
-              className="mt-auto w-full inline-flex items-center justify-center gap-2 rounded-full py-3.5 text-sm font-semibold border border-primary-brand/15 bg-primary-brand/8 text-primary-brand hover:bg-primary-brand hover:text-white transition-all duration-300"
+              onClick={() => openCalendly("ayurvedaIndia")}
+              className="mt-auto cursor-pointer w-full inline-flex items-center justify-center gap-2 rounded-full py-3.5 text-sm font-semibold border border-primary-brand/15 bg-primary-brand/8 text-primary-brand hover:bg-primary-brand hover:text-white transition-all duration-300"
             >
               <Calendar className="w-4 h-4" />
-              Book Ayurvedic (India)
+              Book Now
             </button>
           </div>
 
@@ -138,21 +133,12 @@ export default function PricingSection({ openCalendly }: PricingSectionProps) {
                 </li>
               ))}
             </ul>
-
-            {/* Physio not available note */}
-            <div className="flex items-start gap-2.5 bg-primary-brand/[0.03] border border-primary-brand/8 rounded-xl p-4">
-              <Info className="w-4 h-4 text-primary-brand/30 shrink-0 mt-0.5" />
-              <p className="text-sm text-neutral-400 leading-relaxed">
-                Physiotherapy is not available for USA clients due to licensing regulations.
-              </p>
-            </div>
-
             <button
-              onClick={() => openCalendly(ayurvedaUrl)}
-              className="mt-auto w-full inline-flex items-center justify-center gap-2 rounded-full py-3.5 text-sm font-semibold bg-gradient-to-r from-gold-start to-gold-end text-primary-brand hover:scale-[1.02] hover:shadow-md transition-all duration-300"
+              onClick={() => openCalendly("ayurvedaUSA")}
+              className="mt-auto cursor-pointer w-full inline-flex items-center justify-center gap-2 rounded-full py-3.5 text-sm font-semibold bg-gradient-to-r from-gold-start to-gold-end text-primary-brand hover:scale-[1.02] hover:shadow-md transition-all duration-300 border-0"
             >
               <Calendar className="w-4 h-4" />
-              Book Ayurvedic (USA)
+              Book Now
             </button>
           </div>
         </div>
@@ -172,7 +158,7 @@ function Row({ label, sub, price }: { label: string; sub: string; price: string 
         <p className="text-base font-medium text-neutral-800">{label}</p>
         <p className="text-xs text-neutral-400 mt-0.5">{sub}</p>
       </div>
-      <span className="font-serif text-2xl font-normal text-primary-brand shrink-0">{price}</span>
+      <span className="text-lg font-semibold text-primary-brand">{price}</span>
     </div>
   );
 }
@@ -182,7 +168,7 @@ function PackageRow({ label, price, per }: { label: string; price: string; per: 
     <div className="flex items-center justify-between">
       <span className="text-sm font-semibold text-primary-brand">{label}</span>
       <div className="text-right">
-        <span className="font-serif text-lg font-normal text-primary-brand">{price}</span>
+        <span className="text-lg font-semibold text-primary-brand">{price}</span>
         <p className="text-xs text-neutral-400">{per}</p>
       </div>
     </div>

@@ -50,7 +50,7 @@ const testimonials: Testimonial[] = [
   // 2. Mala
   {
     type: "video",
-    text: "Hi, this is Mala. I had umbilical hernia surgery in January. Dr. Aparna's unique combination of physiotherapy and Ayurvedic care helped me recover far beyond my expectations. Her exercises improved my mobility immediately, while Ayurvedic treatments eased bloating, supported scar healing, and strengthened my core. Within six weeks, I was back to yoga and all my normal activities.",
+    text: "Hi, this is Mala. I had umbilical hernia surgery in January. Dr. Aparna's unique combination of physiotherapy and Ayurvedic care helped me recover far beyond my expectations. Her exercises improved my mobility immediately, while Ayurvedic recommendations eased bloating, supported scar healing, and strengthened my core. Within six weeks, I was back to yoga and all my normal activities.",
     author: "Mrs. Mala",
     location: "Retired Banker, India",
     shortQuote:
@@ -63,7 +63,7 @@ const testimonials: Testimonial[] = [
   // 3. Ranjani
   {
     type: "video",
-    text: "I have been working with Dr. Aparna from Svaparna Health over the past 10 months to help address my chronic PCOS, which I've been diagnosed with for almost 10 years. Dr. Aparna has been excellent at providing insights about my body and helping me understand my prakriti and how it affects my PCOS. She provided me with personalized Ayurvedic formulations, diet recommendations, lifestyle changes, and yoga practices that have really helped manage my PCOS symptoms. I've experienced improvement in my mood, energy levels, and the regularity of my menstrual cycles. I'm very grateful to Svaparna Health and highly recommend them to everyone. Thank you.",
+    text: "I have been working with Dr. Aparna from Svaparna Health over the past 10 months to help address my chronic PCOS of 10 years. Dr. Aparna has been excellent at providing insights about my body and helping me understand my prakriti and how it affects my PCOS. She provided me with personalized Ayurvedic formulations, diet recommendations, lifestyle changes, and yoga practices that have really helped manage my PCOS symptoms. I've experienced improvement in my mood, energy levels, and the regularity of my menstrual cycles. I'm very grateful to Svaparna Health and highly recommend them to everyone. Thank you.",
     author: "Ms. Ranjani",
     location: "Occupational Therapist, California",
     shortQuote:
@@ -351,11 +351,11 @@ export default function ReviewsCarousel() {
         >
           <div className="inline-flex items-center space-x-2 bg-primary-brand/5 border border-primary-brand/10 px-4.5 py-1.5 rounded-full">
             <span className="text-xs font-base uppercase tracking-widest text-[#631a47]">
-              Patient Testimonials
+             Our Testimonials
             </span>
           </div>
           <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-normal text-primary-brand tracking-tight">
-            Real Results, Real Stories <br /> Hear From Our Patients
+            Recovery, in Their Own Words.
           </h2>
         </motion.div>
 
@@ -392,7 +392,7 @@ export default function ReviewsCarousel() {
                 <div className="flex-1 min-h-0 overflow-y-auto px-7 pt-5 sm:px-8 lg:px-10 pb-4">
                   <span
                     aria-hidden
-                    className="block text-5xl leading-none select-none mb-2 -ml-1"
+                    className="block text-5xl leading-none select-none -ml-1"
                     style={{
                       fontFamily: "'Cormorant Garamond', Georgia, serif",
                       color: "#9b6b3a",
@@ -402,7 +402,7 @@ export default function ReviewsCarousel() {
                     "
                   </span>
                   <p
-                    className="text-[#2d1a26] text-lg sm:text-xl lg:text-2xl leading-snug mb-6 font-normal"
+                    className="text-[#2d1a26] text-lg sm:text-xl lg:text-2xl leading-snug mb-3 font-normal"
                     style={{
                       fontFamily: "'Cormorant Garamond', Georgia, serif",
                     }}
@@ -410,7 +410,7 @@ export default function ReviewsCarousel() {
                     {current.shortQuote}
                   </p>
                   <div
-                    className="h-px w-10 mb-6"
+                    className="h-px w-10 mb-2"
                     style={{
                       background: "linear-gradient(90deg, #9b6b3a, transparent)",
                     }}

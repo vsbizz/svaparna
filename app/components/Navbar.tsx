@@ -44,20 +44,20 @@ export default function Navbar({ navItems, openCalendly }: NavbarProps) {
     <nav
       id="main-navbar"
       className={`fixed top-0 left-0 right-0 z-50 bg-white transition-all duration-500 ease-in-out ${
-        isSticky ? " backdrop-blur-md shadow-md py-3" : " py-5"
+        isSticky ? " backdrop-blur-md shadow-md py-3" : " pt-2"
       } ${
         navVisible ? "translate-y-0" : "-translate-y-full pointer-events-none"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-4">
-        <div className="flex items-center justify-between h-14">
+        <div className="flex items-center justify-between">
           {/* Logo Brand Brand Section */}
           <Link id="nav-logo" href="/" className="flex items-center space-x-2">
             <img
               src="/assets/images/logo-white.png"
               alt="Logo"
               className={`w-auto group-hover:scale-105 transition-all duration-300 ${
-                isSticky ? "h-10 sm:h-12" : "h-10 sm:h-12 md:h-14 lg:h-16"
+                isSticky ? "h-10 sm:h-12 md:h-14" : "h-10 sm:h-12 md:h-14 lg:h-20"
               }`}
             />
           </Link>

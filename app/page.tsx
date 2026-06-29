@@ -1,32 +1,33 @@
 // app/page.tsx
 "use client";
 
+import { useState } from "react";
+import { Calendar } from "lucide-react";
+
 import Hero from "./components/home/Hero";
-// import InspiredByNature from "@/components/InspiredByNature";
 import About from "./components/home/About";
-// import Services from "@/components/Services";
+import Consultations from "./components/home/Consultations";
+import Services from "./components/home/Services";
 import ConditionsTreated from "./components/home/ConditionsTreated";
-// import CoveredHeadToToe from "@/components/CoveredHeadToToe";
 import OurProcess from "./components/home/OurProcess";
+import Difference from "./components/home/Difference";
+import PricingSection from "./components/home/PricingSection";
 import ReviewsCarousel from "./components/home/ReviewsCarousel";
 import FAQ from "./components/home/FAQ";
-// import BackToBetterCTA from "@/components/BackToBetterCTA";
-import Consultations from "./components/home/Consultations";
-import Difference from "./components/home/Difference";
-import TreatmentPackages from "./components/home/TreatmentPackages";
-import PricingSection from "./components/home/PricingSection";
 import CTABand from "./components/home/CTABand";
-import Services from "./components/home/Services";
-import { Calendar } from "lucide-react";
 import CalendlyModal from "./components/calendlyModal";
-import { useState } from "react";
+
+// Explicitly define the accepted service type variants
+type ServiceType = "physiotherapy" | "ayurvedaIndia" | "ayurvedaUSA";
 
 export default function Home() {
   const [isCalendlyOpen, setIsCalendlyOpen] = useState(false);
-  const [calendlyUrl, setCalendlyUrl] = useState("");
+  const [activeService, setActiveService] =
+    useState<ServiceType>("physiotherapy");
 
-  const openCalendly = (url: string) => {
-    setCalendlyUrl(url);
+  // Generalized helper handler to trigger booking workflows across children sections
+  const handleOpenBooking = (service: ServiceType) => {
+    setActiveService(service);
     setIsCalendlyOpen(true);
   };
 
@@ -34,19 +35,29 @@ export default function Home() {
     <>
       <Hero
         onStartJourneyClick={() => console.log("Start journey")}
-        onBookConsultationClick={() => console.log("Book consultation")}
+        onBookConsultationClick={() => handleOpenBooking("ayurvedaIndia")}
       />
-      {/* <InspiredByNature />
-      <CoveredHeadToToe onBookConsultation={() => {}} />
-      <Contact /> */}
+
       <About />
-      <Consultations onSelectType={() => { }} />
+
+      <Consultations
+        onSelectType={(type) => handleOpenBooking(type as ServiceType)}
+      />
+
       <Services />
-      <ConditionsTreated onBookConsultation={() => { }} />
+
+      <ConditionsTreated
+        onBookConsultation={() => handleOpenBooking("physiotherapy")}
+      />
+
       <OurProcess />
-      <Difference onBookClick={() => { }} />
-      <TreatmentPackages openCalendly={openCalendly} />
-      <PricingSection openCalendly={openCalendly} />
+
+      <Difference onBookClick={() => handleOpenBooking("ayurvedaUSA")} />
+      <PricingSection
+        openCalendly={(service: string) =>
+          handleOpenBooking(service as ServiceType)
+        }
+      />
       <ReviewsCarousel />
       <FAQ />
       <CTABand
@@ -56,15 +67,17 @@ export default function Home() {
         buttons={[
           {
             label: "Book a Consultation",
-            onClick: () => openCalendly("https://calendly.com/qusaivsbizz"),
+            onClick: () => handleOpenBooking("ayurvedaIndia"),
             icon: <Calendar className="h-4 w-4" />,
             variant: "primary",
           },
         ]}
       />
+
+      {/* Redesigned 2-Step Configuration Modal state integration */}
       <CalendlyModal
         isOpen={isCalendlyOpen}
-        url={calendlyUrl}
+        service={activeService}
         onClose={() => setIsCalendlyOpen(false)}
       />
     </>

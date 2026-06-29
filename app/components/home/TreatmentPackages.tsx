@@ -31,14 +31,14 @@ export default function TreatmentPackages({
         transition={{ duration: 0.6, ease: "easeOut" }}
       >
         {/* Section header */}
-        <div className="mx-auto mb-14 max-w-4xl text-center lg:mb-16">
+        <div className="mx-auto mb-14 max-w-5xl text-center lg:mb-16">
           <div className="mb-5 inline-flex items-center rounded-full border border-primary-brand/10 bg-primary-brand/5 px-5 py-2">
             <span className="text-xs uppercase tracking-[0.18em] text-[#631a47]">
-              Our Packages
+              Our Pricing & Packages
             </span>
           </div>
           <h2 className="font-serif text-3xl font-normal leading-tight tracking-tight text-primary-brand sm:text-4xl md:text-5xl">
-            Transparent Pricing & Structured Plans
+            Transparent Pricing & Structured Packages
           </h2>
         </div>
 

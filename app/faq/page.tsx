@@ -23,7 +23,7 @@ const categories: FAQCategory[] = [
       {
         question: "What should I expect during my first session?",
         answer:
-          "Your initial 60-minute consultation involves a comprehensive 1-on-1 assessment with Dr. Aparna to evaluate your medical history, movement, and personal goals. From there, she will develop a personalized care plan tailored specifically to you.",
+          "Your initial 60-minute consultation involves a comprehensive 1-on-1 assessment with Dr. Aparna to evaluate your medical history, analyse your concerns, and discuss your personal goals. From there, she will develop a personalized care plan tailored specifically to you.",
       },
       {
         question: "How long are my appointments?",
@@ -33,7 +33,7 @@ const categories: FAQCategory[] = [
       {
         question: "What should I bring to my first appointment?",
         answer:
-          "Previous medical and surgical reports, imaging such as MRI/CT Scan/Ultrasound/X-ray reports, lab reports related to bloodwork and other tests, list of current medications and supplements. Your detailed medical history and background helps us thoroughly analyze your concerns and find the best solutions for your care.",
+          "Please share any previous medical and surgical reports, imaging such as MRI/CT Scan/Ultrasound/X-ray reports, lab reports related to bloodwork and other tests, list of current medications and supplements. Your detailed medical history and background helps us thoroughly analyze your concerns and find the best solutions for your care.",
       },
       {
         question: "What is your cancellation and rescheduling policy?",
@@ -44,7 +44,7 @@ const categories: FAQCategory[] = [
         question:
           "What is the ideal protocol to be followed during the first appointment and follow up sessions?",
         answer:
-          "Please be on time for your sessions so that you get the full benefit of the appointment. Please complete your paperwork and payments on time so that you are ready for your first appointment and follow-sessions. Lastly, please be respectful and courteous in your interactions and we will do our best to respect your needs as well. Thank you and we look forward to helping you!",
+          "Please be on time for your sessions so that you get the full benefit of the appointment. Please complete your paperwork and payments on time so that you are ready for your first appointment and follow-sessions. We request you to please be respectful and courteous in your interactions and we will do our best to respect your needs as well. Thank you and we look forward to helping you!",
       },
       {
         question: "What payment methods are accepted?",
@@ -64,7 +64,7 @@ const categories: FAQCategory[] = [
       {
         question: "Will I experience any pain during the session?",
         answer:
-          "There might be some mild pain noted during your initial assessment or follow up sessions but this is temporary. We try to make sure everyone feels as comfortable as possible during their sessions.",
+          " There might be some mild pain noted during your initial assessment or follow up sessions but this is temporary. We try to make sure everyone feels as comfortable as possible during their sessions.",
       },
       {
         question: "Is it safe to undergo Physiotherapy while I am pregnant?",
@@ -213,171 +213,9 @@ export default function FAQPage() {
 
   return (
     <>
-      {/* ── SECTION 1: Original tabbed accordion ── */}
-      <section
-        id="faq"
-        className="py-20 lg:py-34 bg-[#fffef7] text-primary-brand relative border-t border-primary-brand/5"
-      >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Header — small "FAQs" label removed */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-80px" }}
-            transition={{ duration: 0.55 }}
-            className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-5 mb-12 pb-10 border-b border-primary-brand/8"
-          >
-            <h2
-              className="text-3xl sm:text-4xl md:text-5xl font-normal text-primary-brand tracking-tight"
-              style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}
-            >
-              Frequently Asked Questions
-            </h2>
-          </motion.div>
-
-          {/* Tab strip */}
-          <motion.div
-            initial={{ opacity: 0, y: 12 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.45, delay: 0.1 }}
-            className="flex items-center gap-2 overflow-x-auto pb-2 mb-10 no-scrollbar"
-          >
-            {categories.map((cat) => {
-              const isActive = activeTab === cat.id;
-              return (
-                <button
-                  key={cat.id}
-                  onClick={() => handleTabChange(cat.id)}
-                  className="relative px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-250 cursor-pointer"
-                  style={{
-                    background: isActive ? "#631a47" : "transparent",
-                    color: isActive ? "white" : "rgba(99,26,71,0.50)",
-                    border: isActive
-                      ? "1px solid #631a47"
-                      : "1px solid rgba(99,26,71,0.15)",
-                  }}
-                >
-                  {cat.label}
-                  <span
-                    className="ml-2 text-[10px] font-mono"
-                    style={{
-                      color: isActive
-                        ? "rgba(255,255,255,0.55)"
-                        : "rgba(99,26,71,0.30)",
-                    }}
-                  >
-                    {String(cat.items.length).padStart(2, "0")}
-                  </span>
-                </button>
-              );
-            })}
-          </motion.div>
-
-          {/* Accordion panel */}
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={activeTab}
-              initial={{ opacity: 0, y: 16 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -8 }}
-              transition={{ duration: 0.3, ease: "easeOut" }}
-              className="border-t border-primary-brand/8"
-            >
-              {activeCategory.items.map((item, index) => {
-                const isOpen = openIndex === index;
-                return (
-                  <div key={index} className="border-b border-primary-brand/8">
-                    <button
-                      onClick={() => setOpenIndex(isOpen ? null : index)}
-                      className="w-full flex items-start justify-between gap-8 py-6 text-left cursor-pointer group"
-                      aria-expanded={isOpen}
-                    >
-                      <div className="flex items-start gap-5 flex-1 min-w-0">
-                        <span
-                          className="shrink-0 font-light leading-none select-none transition-colors duration-200 pt-0.5"
-                          style={{
-                            fontFamily: "'Cormorant Garamond', Georgia, serif",
-                            fontSize: "1.5rem",
-                            color: isOpen ? "#631a47" : "rgba(99,26,71,0.14)",
-                          }}
-                        >
-                          {String(index + 1).padStart(2, "0")}
-                        </span>
-                        <span
-                          className="text-base sm:text-lg font-normal leading-snug transition-colors duration-200"
-                          style={{
-                            fontFamily: "'Cormorant Garamond', Georgia, serif",
-                            color: isOpen ? "#2d1a26" : "#5a3d4e",
-                            fontWeight: isOpen ? 600 : 400,
-                          }}
-                        >
-                          {item.question}
-                        </span>
-                      </div>
-                      <div
-                        className="w-7 h-7 rounded-full border flex items-center justify-center shrink-0 ps-1 transition-all duration-300"
-                        style={{
-                          borderColor: isOpen ? "#631a47" : "rgba(99,26,71,0.15)",
-                          background: isOpen ? "#631a47" : "transparent",
-                        }}
-                      >
-                        <motion.span
-                          animate={{ rotate: isOpen ? 45 : 0 }}
-                          transition={{ duration: 0.22 }}
-                          className="block text-base leading-none font-light"
-                          style={{
-                            color: isOpen ? "white" : "#631a47",
-                            marginTop: "-1px",
-                          }}
-                        >
-                          +
-                        </motion.span>
-                      </div>
-                    </button>
-
-                    <AnimatePresence initial={false}>
-                      {isOpen && (
-                        <motion.div
-                          key="answer"
-                          initial={{ height: 0, opacity: 0 }}
-                          animate={{ height: "auto", opacity: 1 }}
-                          exit={{ height: 0, opacity: 0 }}
-                          transition={{ duration: 0.28, ease: [0.4, 0, 0.2, 1] }}
-                          className="overflow-hidden"
-                        >
-                          <div
-                            className="pb-7"
-                            style={{
-                              paddingLeft: "calc(1.5rem + 1.25rem + 1.25rem)",
-                            }}
-                          >
-                            <motion.div
-                              initial={{ width: 0 }}
-                              animate={{ width: 32 }}
-                              transition={{ duration: 0.3, delay: 0.1 }}
-                              className="h-px mb-4"
-                              style={{
-                                background: "linear-gradient(90deg, #9b6b3a, transparent)",
-                              }}
-                            />
-                            <p className="text-sm sm:text-base text-neutral-600 leading-8 max-w-3xl">
-                              {item.answer}
-                            </p>
-                          </div>
-                        </motion.div>
-                      )}
-                    </AnimatePresence>
-                  </div>
-                );
-              })}
-            </motion.div>
-          </AnimatePresence>
-        </div>
-      </section>
 
       {/* ── SECTION 2: 2-column grid with all FAQs ── */}
-      <section className="py-20 bg-white text-primary-brand border-t border-primary-brand/5">
+      <section className="py-30 bg-white text-primary-brand border-t border-primary-brand/5">
         <motion.div
           className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
           initial={{ opacity: 0, y: 24 }}
@@ -388,11 +226,11 @@ export default function FAQPage() {
           <div className="mb-12 space-y-3">
             <div className="inline-flex items-center bg-primary-brand/5 border border-primary-brand/10 px-4 py-1.5 rounded-full">
               <span className="text-xs font-mono uppercase tracking-widest text-[#631a47]">
-                All Questions
+                FAQs
               </span>
             </div>
             <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-normal text-primary-brand tracking-tight">
-              Everything You Need to Know
+              Frequently Asked Questions
             </h2>
           </div>
 
