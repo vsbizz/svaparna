@@ -90,7 +90,7 @@ const testimonials: Testimonial[] = [
     type: "video",
     text: "Hi, I'm Smriti, and I consulted Dr. Aparna of Svaparna Health for a back injury of mine. This happened a couple of months ago, and I was in severe pain. Dr. Aparna's treatment plan helped me regain the ability to do my daily activities without affecting my work week. Over the course of the last one and a half months, I have become independent and able to do all activities again with minimal pain. I've seen significant progress in my posture and day-to-day functioning. There is a lot of positive change in how I feel and how I'm getting things done. I highly recommend Dr. Aparna for all your physical therapy needs. Thank you.",
     author: "Ms. Smriti",
-    location: "Entrepreneur and small business owner, India",
+    location: "Entrepreneur, India",
     shortQuote:
       "I've become independent and able to do all activities again with minimal pain.",
     leftVideo: "assets/testimonial-videos/MsSmritiTestimonial.mov",
@@ -223,9 +223,6 @@ function VideoPanel({
       <div className="absolute bottom-0 left-0 right-0 p-5 sm:p-6 pointer-events-none">
         <div className="flex items-end justify-between">
           <AuthorMeta author={t.author} location={t.location} />
-          <div className="opacity-80">
-            <GoogleStars />
-          </div>
         </div>
       </div>
     </div>
@@ -248,25 +245,9 @@ function ImagePanel({ t }: { t: WrittenTestimonial }) {
         aria-hidden
         className="absolute inset-0 bg-gradient-to-t from-[#1a0d14]/70 via-transparent to-transparent pointer-events-none"
       />
-      <div
-        aria-hidden
-        className="absolute top-6 left-7 leading-none select-none opacity-30"
-        style={{
-          fontFamily: "'Cormorant Garamond', Georgia, serif",
-          fontSize: "6rem",
-          color: "white",
-          fontWeight: 300,
-          lineHeight: 1,
-        }}
-      >
-        "
-      </div>
       <div className="absolute bottom-0 left-0 right-0 p-5 sm:p-6 pointer-events-none">
         <div className="flex items-end justify-between">
           <AuthorMeta author={t.author} location={t.location} />
-          <div className="opacity-80">
-            <GoogleStars />
-          </div>
         </div>
       </div>
     </div>
