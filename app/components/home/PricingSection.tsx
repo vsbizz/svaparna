@@ -5,10 +5,14 @@ import { Calendar, Check } from "lucide-react";
 
 // Update the type signature to match our service enum values
 interface PricingSectionProps {
-  openCalendly: (service: "physiotherapy" | "ayurvedaIndia" | "ayurvedaUSA") => void;
+  openCalendly: (
+    service: "physiotherapy" | "ayurvedaIndia" | "ayurvedaUSA"
+  ) => void;
 }
 
-export default function PricingSection({ openCalendly }: PricingSectionProps) {
+export default function PricingSection({
+  openCalendly,
+}: PricingSectionProps) {
   return (
     <section
       id="pricing"
@@ -28,36 +32,51 @@ export default function PricingSection({ openCalendly }: PricingSectionProps) {
               Pricing & Packages
             </span>
           </div>
+
           <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-normal text-primary-brand tracking-tight">
             Transparent Pricing & Structured Packages
           </h2>
         </div>
 
-        {/* ── 3-column pricing table ── */}
+        {/* Pricing Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-primary-brand/8 rounded-[2rem] overflow-hidden shadow-sm">
-
-          {/* ── Col 1: Physiotherapy (India) ── */}
+          {/* Physiotherapy */}
           <div className="bg-white p-5 sm:p-8 flex flex-col gap-6">
             <div>
               <span className="text-base font-mono font-extrabold uppercase tracking-[0.18em] text-gold-start">
                 Physiotherapy · India
               </span>
-              <p className="text-sm text-neutral-400 mt-1">Online + Mumbai in-person (coming soon)</p>
+              <p className="text-sm text-neutral-400 mt-1">
+                Online + Mumbai in-person (coming soon)
+              </p>
             </div>
 
             <div className="space-y-1">
-              <Row label="Initial Consultation" sub="60 min" price="₹2,000" />
+              <Row
+                label="Initial Consultation"
+                sub="60 min"
+                price="₹2,000"
+              />
               <Row label="Follow-up Session" sub="45 min" price="₹1,500" />
             </div>
 
             {/* Packages */}
             <div className="bg-primary-brand/[0.03] border border-primary-brand/8 rounded-xl p-5 space-y-3">
-              <div className="flex items-center gap-2 mb-1">
-                <span className="text-xs font-mono font-bold uppercase tracking-[0.2em] text-gold-start">Packages</span>
-                <span className="text-xs bg-amber-50 border border-amber-200 text-amber-700 font-semibold px-2 py-0.5 rounded-full">Follow-up Session Packages</span>
-              </div>
-              <PackageRow label="6 Follow-up Sessions" price="₹7,200" per="₹1,200 / session" />
-              <PackageRow label="12 Follow-up Sessions" price="₹12,000" per="₹1,000 / session" />
+              <h4 className="text-sm font-mono font-bold text-gold-start">
+                Follow-Up Session Packages
+              </h4>
+
+              <PackageRow
+                label="6 Follow-up Sessions"
+                price="₹7,200"
+                per="₹1,200 / session"
+              />
+
+              <PackageRow
+                label="12 Follow-up Sessions"
+                price="₹12,000"
+                per="₹1,000 / session"
+              />
             </div>
 
             <button
@@ -69,17 +88,23 @@ export default function PricingSection({ openCalendly }: PricingSectionProps) {
             </button>
           </div>
 
-          {/* ── Col 2: Ayurveda India ── */}
+          {/* Ayurveda India */}
           <div className="bg-white p-5 sm:p-8 flex flex-col gap-6">
             <div>
               <span className="text-base font-mono font-extrabold uppercase tracking-[0.18em] text-gold-start">
                 Ayurvedic Care · India
               </span>
-              <p className="text-sm text-neutral-400 mt-1">Online + Mumbai in-person (coming soon)</p>
+              <p className="text-sm text-neutral-400 mt-1">
+                Online + Mumbai in-person (coming soon)
+              </p>
             </div>
 
             <div className="space-y-1">
-              <Row label="Initial Consultation" sub="60 min" price="₹2,000" />
+              <Row
+                label="Initial Consultation"
+                sub="60 min"
+                price="₹2,000"
+              />
               <Row label="Follow-up Session" sub="45 min" price="₹1,500" />
             </div>
 
@@ -89,10 +114,10 @@ export default function PricingSection({ openCalendly }: PricingSectionProps) {
                 "Vikriti (imbalances) analysis",
                 "Personalised diet & lifestyle plan",
                 "Herbal & supplement guidance",
-              ].map((f, i) => (
-                <li key={i} className="flex items-start gap-2.5">
+              ].map((feature, index) => (
+                <li key={index} className="flex items-start gap-2.5">
                   <Check className="w-4 h-4 text-gold-start shrink-0 mt-0.5" />
-                  <span className="text-sm text-neutral-600">{f}</span>
+                  <span className="text-sm text-neutral-600">{feature}</span>
                 </li>
               ))}
             </ul>
@@ -106,7 +131,7 @@ export default function PricingSection({ openCalendly }: PricingSectionProps) {
             </button>
           </div>
 
-          {/* ── Col 3: Ayurveda USA ── */}
+          {/* Ayurveda USA */}
           <div className="bg-white p-5 sm:p-8 flex flex-col gap-6">
             <div>
               <span className="text-base font-mono font-extrabold uppercase tracking-[0.18em] text-gold-start">
@@ -123,16 +148,17 @@ export default function PricingSection({ openCalendly }: PricingSectionProps) {
             <ul className="space-y-2.5 flex-1">
               {[
                 "Prakriti (constitutional) analysis",
-                "Nadi Pariksha (pulse diagnosis)",
+                "Vikriti (imbalances) analysis",
                 "Personalised diet & lifestyle plan",
                 "Herbal & supplement guidance",
-              ].map((f, i) => (
-                <li key={i} className="flex items-start gap-2.5">
+              ].map((feature, index) => (
+                <li key={index} className="flex items-start gap-2.5">
                   <Check className="w-4 h-4 text-gold-start shrink-0 mt-0.5" />
-                  <span className="text-sm text-neutral-600">{f}</span>
+                  <span className="text-sm text-neutral-600">{feature}</span>
                 </li>
               ))}
             </ul>
+
             <button
               onClick={() => openCalendly("ayurvedaUSA")}
               className="mt-auto cursor-pointer w-full inline-flex items-center justify-center gap-2 rounded-full py-3.5 text-sm font-semibold bg-gradient-to-r from-gold-start to-gold-end text-primary-brand hover:scale-[1.02] hover:shadow-md transition-all duration-300 border-0"
@@ -144,31 +170,55 @@ export default function PricingSection({ openCalendly }: PricingSectionProps) {
         </div>
 
         <p className="text-center text-sm text-neutral-400 mt-8 font-light">
-          Session packages (6 & 12) are available for physiotherapy only, unlocked after your first consultation
+          Follow-up session packages are available for Physiotherapy only.
         </p>
       </motion.div>
     </section>
   );
 }
 
-function Row({ label, sub, price }: { label: string; sub: string; price: string }) {
+function Row({
+  label,
+  sub,
+  price,
+}: {
+  label: string;
+  sub: string;
+  price: string;
+}) {
   return (
     <div className="flex items-center justify-between py-3 border-b border-primary-brand/8 last:border-0">
       <div>
         <p className="text-base font-medium text-neutral-800">{label}</p>
         <p className="text-xs text-neutral-400 mt-0.5">{sub}</p>
       </div>
-      <span className="text-lg font-semibold text-primary-brand">{price}</span>
+
+      <span className="text-lg font-semibold text-primary-brand">
+        {price}
+      </span>
     </div>
   );
 }
 
-function PackageRow({ label, price, per }: { label: string; price: string; per: string }) {
+function PackageRow({
+  label,
+  price,
+  per,
+}: {
+  label: string;
+  price: string;
+  per: string;
+}) {
   return (
     <div className="flex items-center justify-between">
-      <span className="text-sm font-semibold text-primary-brand">{label}</span>
+      <span className="text-sm font-semibold text-primary-brand">
+        {label}
+      </span>
+
       <div className="text-right">
-        <span className="text-lg font-semibold text-primary-brand">{price}</span>
+        <span className="text-lg font-semibold text-primary-brand">
+          {price}
+        </span>
         <p className="text-xs text-neutral-400">{per}</p>
       </div>
     </div>
